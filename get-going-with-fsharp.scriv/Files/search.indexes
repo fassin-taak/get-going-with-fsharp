@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SearchIndexes Version="1.0">
+    <Documents>
+        <Document ID="3">
+            <Title>An Introduction to F#</Title>
+            <Text>F# is a functional-first programming language. That is, F# is a programming language which emphasizes the functional aspect of programming to a greater extent than other languages you may be familiar with such as C#, Visual Basic .NET, Python and JavaScript. You will already be quite familiar with functions: you met them in high school when you drew a plot of the function, ￼ using your trusty Sharp EL 9300 graphing calculator or your favorite plotting program on the WWW (e.g. Desmos at https://desmos.com/calculator). Functions as opposed to objects are the first-class citizens of functional programming languages like F#. They allow one to think about and solve problems using features prominent in functional programming such as immutability, pipelining, partial application, type-inference, and strong typing. (Note that these features are not unique to F#, they exist in other functional programming languages, and indeed in ordinary imperative programming languages such as C#, Visual Basic .NET, Python and JavaScript).
+F# was created by Don Syme who is an Australian Computer Scientist and Principal Researcher at Microsoft Research, Cambridge, UK. He is still very active in the F# community and makes contributions to the F# language to this day (March 24th 2021). You could call him the Grandfather of F# or the Supreme Leader of the F# community.
+F# allows one to think about a particular programming problem or task in a clean and simple way. It has the clean simplicity of Python while retaining the performance and type safety found in languages such as C++ and C#. F# can be used to write small programs with specific goals set at the start to large systems with open-ended goals.
+F# is fully open source and fully cross-platform. F# is integrated within Visual Studio and so can make full use of all the integrated development environment’s (IDE’s) features such as Intellisense, packages management, documentation browser, etc. Alternatively, The Visual F# Tools can be downloaded from https://github.com/Microsoft/visualfsharp to developer F# programs without an IDE. On top of that F# code can be run in Jupyter Notebooks hosted on Microsoft Azure Services.
+I also use Visual Studio Code sometimes because it is cross-platform and has about a million different extensions from Markdown edting support to copy code/text with line numbers and everything else you can think of in-between.
+
+
+
+
+
+
+</Text>
+        </Document>
+        <Document ID="4">
+            <Title>Hello, World!</Title>
+            <Text>As is traditional when learning most programming languages we will begin by writing a “Hello, World!” program. To do so first download and install the .NET SDK. You search the Internet for instructions how to download and install the .NET SDK. You are also free to choose whichever OS you desire.
+Open a command terminal and type in
+
+dotnet new console -lang &quot;F#&quot; -o hello
+
+cd into the directory hello which was created when you typed in the above command. Then, open the file Program.fs which was created when the directory was created. It should look something like:
+
+     01: // Learn more about F# at http://docs.microsoft.com/dotnet/fsharp
+02: 
+03: open System
+04: 
+05: // Define a function to construct a message to print
+06: let from whom =
+07:     sprintf &quot;from %s&quot; whom
+08: 
+09: [&lt;EntryPoint&gt;]
+10: let main argv =
+11:     let message = from &quot;F#&quot; // Call the function
+12:     printfn &quot;Hello world %s&quot; message
+13:     0 // return an integer exit code
+
+Replace the contents of the file with:
+
+1: printfn &quot;Hello, World!&quot;
+
+Now go back to the terminal and type in:
+
+dotnet run
+
+Pretty cool! Right? One line of code is all that's needed to print out a message to the console and a one line command is all you need to build and run the executable that prints out the message. That's a lot better than C or C++ and just as good as Python or any other scripting language.
+
+
+
+</Text>
+        </Document>
+        <Document ID="5">
+            <Title>Compiler Codes</Title>
+            <Text>Codes for compiler - Literature and Latte
+
+￼User avatar
+Cosmicjive
+Posts: 53
+Joined: Wed Sep 22, 2010 8:14 pm
+Platform: Mac + Windows
+Location: Tustin, CA (USA)
+QUOTE
+MON MAR 19, 2012 6:32 PM POST
+These are known as &quot;placeholder tags.&quot;
+
+These are the tags that work in the Windows version of the application:
+
+Statistics
+
+&lt;$wc&gt;
+Gets replaced during the Compile process with the total word count of the text currently being compiled.
+
+&lt;$wc50&gt;
+Gets replaced during the Compile process with the total word count of the text currently being compiled, rounded to the nearest 50 words.
+
+&lt;$wc100&gt;
+Gets replaced during the Compile process with the total word count of the text currently being compiled, rounded to the nearest 100 words.
+
+&lt;$wc500&gt;
+Gets replaced during the Compile process with the total word count of the text currently being compiled, rounded to the nearest 500 words.
+
+&lt;$wc1000&gt;
+Gets replaced during the Compile process with the total word count of the text currently being compiled, rounded to the nearest 1000 words.
+
+&lt;$cc&gt;
+Gets replaced during the Compile process with the total character count of the text currently being compiled.
+
+&lt;$cc50&gt;
+Gets replaced during the Compile process with the total character count of the text currently being compiled, rounded to the nearest 50 characters.
+
+&lt;$cc100&gt;
+Gets replaced during the Compile process with the total character count of the text currently being compiled, rounded to the nearest 100 characters.
+
+&lt;$cc500&gt;
+Gets replaced during the Compile process with the total character count of the text currently being compiled, rounded to the nearest 500 characters.
+
+&lt;$cc1000&gt;
+Gets replaced during the Compile process with the total character count of the text currently being compiled, rounded to the nearest 1000 characters.
+
+
+
+
+Auto-Numbering
+
+&lt;$n&gt;
+Gets replaced with Arabic numerals during the Compile process. The number is incremented each time a &lt;$n&gt; tag is encountered in the text, so “&lt;$n&gt;, &lt;$n&gt;, &lt;$n&gt;” would become “1, 2, 3” in the compiled text.
+
+&lt;$sn&gt;
+The same as &lt;$n&gt; but intended to be used for sub-numbering. The count restarts each time an &lt;$n&gt; tag is encountered. Thus, “&lt;$n&gt; (&lt;$sn&gt;, &lt;$sn&gt;), &lt;$n&gt; (&lt;$sn&gt;, &lt;$sn&gt;)” would become “1 (1, 2), 2 (1, 2)” in the compiled text.
+
+&lt;$r&gt;
+Gets replaced with lowercase Roman numerals during the Compile process. The number is incremented each time a &lt;$r&gt; tag is encountered in the text, so “&lt;$r&gt;, &lt;$r&gt;, &lt;$r&gt;” would become “i, ii, iii” in the compiled text.
+
+&lt;$R&gt;
+Gets replaced with uppercase Roman numerals during the Compile process. The number is incremented each time a &lt;$R&gt; tag is encountered in the text, so “&lt;$R&gt;, &lt;$R&gt;, &lt;$R&gt;” would become “I, II, III” in the compiled text.
+
+&lt;$w&gt;
+Gets replaced with numbers as lowercase words (using the current language settings) during the Compile process. The number is incremented each time a &lt;$w&gt; tag is encountered in the text, so “&lt;$w&gt;, &lt;$w&gt;, &lt;$w&gt;” would become “one, two, three” in the compiled text.
+
+&lt;$t&gt;
+Gets replaced with numbers as title-case words (using the current language settings) during the Compile process. The number is incremented each time a &lt;$t&gt; tag is encountered in the text, so “&lt;$t&gt;, &lt;$t&gt;, &lt;$t&gt;” would become “One, Two, Three” in the compiled text.
+
+&lt;$W&gt;
+Gets replaced with numbers as uppercase words (using the current language settings) during the Compile process. The number is incremented each time a &lt;$W&gt; tag is encountered in the text, so “&lt;$W&gt;, &lt;$W&gt;, &lt;$W&gt;” would become “ONE, TWO, THREE” in the compiled text.
+
+&lt;$hn&gt;
+Gets replaced during the Compile process with hierarchical numbering based on the level of the document in which the tag occurs relative to the Draft folder or compile group (depending on the current compile settings). So occurrences of the &lt;$hn&gt; tag in the second document in the Draft folder may get replaced with the number “2”; occurrences of the tag in the third subdocument of the eight document in the Draft folder may be replaced with “8.3”.
+
+Restarting auto-numbering streams:
+&lt;$rst&gt;
+Place &lt;$rst&gt; immediately before any of the auto-numbering tags to restart the numbering. So, for instance, “&lt;$w&gt;, &lt;$w&gt;, &lt;$w&gt;, &lt;$rst&gt;&lt;$w&gt;, &lt;$w&gt;” would become “one, two, three, one, two” in the compiled text.
+
+Page Numbers
+
+&lt;$p&gt;
+When used in the header or footer, gets replaced with the current page number.
+
+
+-Jeff</Text>
+        </Document>
+        <Document ID="6">
+            <Title>Summary</Title>
+            <Text>In this chapter your wrote your first F# program!: A simple &quot;Hello, World!&quot; program.
+To do this you setup your system to write F# programs. You downloaded and installed the .NET SDK (if you didn't already have it installed) and then created a new console project. You then modified the code to print &quot;Hello, World!&quot; to the console.</Text>
+        </Document>
+        <Document ID="7">
+            <Title>The dotnet Command</Title>
+            <Text>Your should familiarize yourself with the dotnet command as you will be using it a lot. You can get help by typing in dotnet -h and also by searching and reading the Microsoft documentation online. Here are a few exercises that you can try after you've familiarized yourself with the dotnet command.</Text>
+        </Document>
+        <Document ID="8">
+            <Title>Exercises</Title>
+            <Text>What is the default build configuration?
+In which directory is the output stored?
+What (SDK) command do you need to use to clean the output inside the build directory? Which files/directories still remain after you've cleaned the build directory?
+What command do you need to type in to build a Release version of the &quot;Hello, World!&quot; application?
+How do you run the Release version of the application.
+How do you clean the Release build?</Text>
+        </Document>
+        <Document ID="9">
+            <Title>But Wait!</Title>
+            <Text>I know what you're thinking!: There is something wrong here! Where is the function. There is a printfn function being called here which is taking a single string parameter as input and then outputting that string parameter to the console. But where is our function? Isn't F# supposed to be a functional-first programming language where nearly everything is a function? That is true. But in this case to make things easier like scripting, the F# compiler is creating a &quot;main&quot; function for us which is then called by the .NET runtime. To make this more explicit we can wrap the &quot;Hello, World&quot; code inside of a function ourselves. So let's do that.
+Change the code </Text>
+        </Document>
+    </Documents>
+</SearchIndexes>

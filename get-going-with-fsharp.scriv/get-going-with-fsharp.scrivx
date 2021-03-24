@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrivenerProject Template="No" Version="1.5" Creator="SCRWIN-1.9.16.0" Device="SSDVPS-96525" Modified="2021-03-24 17:38:56 +0000" ModID="C5C187DF-018E-4E26-9195-B8F6089ED236">
+    <Binder>
+        <BinderItem ID="0" UUID="9F69BDD5-CA7F-492E-9DF1-409A34B3DAB8" Created="2021-03-21 22:54:28 +0000" Modified="2021-03-21 22:54:28 +0000" Type="DraftFolder">
+            <Title>Draft</Title>
+            <MetaData>
+                <IncludeInCompile>Yes</IncludeInCompile>
+            </MetaData>
+            <Children>
+                <BinderItem ID="3" UUID="C35BF494-0234-4C23-A71B-365F1D2E356B" Created="2021-03-21 22:54:28 +0000" Modified="2021-03-24 17:15:58 +0000" Type="Folder">
+                    <Title>An Introduction to F#</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <Target Type="Words">0</Target>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="4" UUID="E887C311-725A-4225-8533-EE749F092FCA" Created="2021-03-24 00:34:30 +0000" Modified="2021-03-24 17:37:23 +0000" Type="Text">
+                            <Title>Hello, World!</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>rtf</FileExtension>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>1307,0</TextSelection>
+                                <Target Type="Words">0</Target>
+                            </TextSettings>
+                            <Children>
+                                <BinderItem ID="9" UUID="59B61A79-E615-47EF-9293-6B22EAC52B96" Created="2021-03-24 15:43:35 +0000" Modified="2021-03-24 17:38:53 +0000" Type="Text">
+                                    <Title>But Wait!</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>662,0</TextSelection>
+                                        <Target Type="Words">0</Target>
+                                    </TextSettings>
+                                </BinderItem>
+                            </Children>
+                        </BinderItem>
+                        <BinderItem ID="7" UUID="93EBAA22-CA91-4CE1-BF56-3CD5DFB49BA1" Created="2021-03-24 14:32:14 +0000" Modified="2021-03-24 15:05:50 +0000" Type="Text">
+                            <Title>The dotnet Command</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>273,0</TextSelection>
+                                <Target Type="Words">0</Target>
+                            </TextSettings>
+                            <Children>
+                                <BinderItem ID="8" UUID="7991FCDA-4BCD-4BD2-8F52-1167AEDA463E" Created="2021-03-24 15:05:33 +0000" Modified="2021-03-24 15:21:15 +0000" Type="Text">
+                                    <Title>Exercises</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>400,0</TextSelection>
+                                        <Target Type="Words">0</Target>
+                                    </TextSettings>
+                                </BinderItem>
+                            </Children>
+                        </BinderItem>
+                        <BinderItem ID="6" UUID="8B13878F-F44C-492A-A0B9-46794D018BEB" Created="2021-03-24 01:38:41 +0000" Modified="2021-03-24 02:28:05 +0000" Type="Text">
+                            <Title>Summary</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>331,0</TextSelection>
+                                <Target Type="Words">0</Target>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+            </Children>
+        </BinderItem>
+        <BinderItem ID="1" UUID="64C79C0F-3C6B-415C-AE31-2308B9A0F25A" Created="2021-03-21 22:54:28 +0000" Modified="2021-03-21 22:54:28 +0000" Type="ResearchFolder">
+            <Title>Research</Title>
+            <MetaData>
+                <IncludeInCompile>Yes</IncludeInCompile>
+            </MetaData>
+            <Children>
+                <BinderItem ID="5" UUID="1B374FC2-46F2-4132-AED0-884826BE5ED5" Created="2021-03-24 01:19:05 +0000" Modified="2021-03-24 01:22:02 +0000" Type="Text">
+                    <Title>Compiler Codes</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>4305,0</TextSelection>
+                        <Target Type="Words">0</Target>
+                    </TextSettings>
+                </BinderItem>
+            </Children>
+        </BinderItem>
+        <BinderItem ID="2" UUID="4A15219D-719B-479F-9ABB-EFABB0573089" Created="2021-03-21 22:54:28 +0000" Modified="2021-03-21 22:54:28 +0000" Type="TrashFolder">
+            <Title>Trash</Title>
+            <MetaData>
+                <IncludeInCompile>Yes</IncludeInCompile>
+            </MetaData>
+        </BinderItem>
+    </Binder>
+    <LabelSettings>
+        <Title>Label</Title>
+        <DefaultLabelID>-1</DefaultLabelID>
+        <Labels>
+            <Label ID="-1">No Label</Label>
+            <Label ID="0" Color="0.752941 0.752941 1.000000">Concept</Label>
+            <Label ID="1" Color="1.000000 0.752941 0.752941">Chapter</Label>
+        </Labels>
+    </LabelSettings>
+    <StatusSettings>
+        <Title>Status</Title>
+        <DefaultStatusID>-1</DefaultStatusID>
+        <StatusItems>
+            <Status ID="-1">No Status</Status>
+            <Status ID="0">N/A</Status>
+            <Status ID="1">To Do</Status>
+            <Status ID="2">First Draft</Status>
+            <Status ID="3">Revised Draft</Status>
+            <Status ID="4">Final Draft</Status>
+            <Status ID="5">Done</Status>
+        </StatusItems>
+    </StatusSettings>
+    <ProjectTargets>
+        <DraftTarget Type="Words" CountIncludedOnly="No" CurrentCompileGroupOnly="No">0</DraftTarget>
+        <SessionTarget Type="Words" CountDraftOnly="No" AllowNegatives="No" ResetType="Midnight" DeterminedFromDeadline="No" CanWriteOnDeadlineDate="Yes" WritingDays="">0</SessionTarget>
+        <PreviousSession Words="18" Characters="90" Date="2021-03-24 17:37:05 +0000"/>
+    </ProjectTargets>
+    <Collections>
+        <Collection Type="Binder" ID="AD143D59-65BD-4266-B1C7-C14D1E32B820" Color="0.901961 0.917647 0.933333">
+            <Title>Binder</Title>
+        </Collection>
+        <Collection Type="RecentSearch" ID="895CF076-8A10-48B8-AE01-473AAE911B6A" Color="0.901961 0.901961 0.980392">
+            <Title>Search Results</Title>
+            <SearchSettings Operator="Exact" Type="All" Scope="All" CompileSetting="All" CaseSensitive="No"></SearchSettings>
+        </Collection>
+    </Collections>
+    <PrintSettings PaperType="A4" LeftMargin="72.0001" RightMargin="72.0001" TopMargin="72.0001" BottomMargin="72.0001" Orientation="Portrait" Collates="No" ReverseOrder="No"/>
+</ScrivenerProject>
