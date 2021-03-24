@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ScrivenerProject Template="No" Version="1.5" Creator="SCRWIN-1.9.16.0" Device="SSDVPS-96525" Modified="2021-03-24 17:38:56 +0000" ModID="C5C187DF-018E-4E26-9195-B8F6089ED236">
+<ScrivenerProject Template="No" Version="1.5" Creator="SCRWIN-1.9.16.0" Device="SSDVPS-96525" Modified="2021-03-24 17:50:13 +0000" ModID="FCC29A24-4B6C-49BC-9BDE-FAF67F77FD6F">
     <Binder>
         <BinderItem ID="0" UUID="9F69BDD5-CA7F-492E-9DF1-409A34B3DAB8" Created="2021-03-21 22:54:28 +0000" Modified="2021-03-21 22:54:28 +0000" Type="DraftFolder">
             <Title>Draft</Title>
@@ -27,7 +27,7 @@
                                 <Target Type="Words">0</Target>
                             </TextSettings>
                             <Children>
-                                <BinderItem ID="9" UUID="59B61A79-E615-47EF-9293-6B22EAC52B96" Created="2021-03-24 15:43:35 +0000" Modified="2021-03-24 17:38:53 +0000" Type="Text">
+                                <BinderItem ID="9" UUID="59B61A79-E615-47EF-9293-6B22EAC52B96" Created="2021-03-24 15:43:35 +0000" Modified="2021-03-24 17:50:11 +0000" Type="Text">
                                     <Title>But Wait!</Title>
                                     <MetaData>
                                         <IncludeInCompile>Yes</IncludeInCompile>
@@ -125,7 +125,7 @@
     <ProjectTargets>
         <DraftTarget Type="Words" CountIncludedOnly="No" CurrentCompileGroupOnly="No">0</DraftTarget>
         <SessionTarget Type="Words" CountDraftOnly="No" AllowNegatives="No" ResetType="Midnight" DeterminedFromDeadline="No" CanWriteOnDeadlineDate="Yes" WritingDays="">0</SessionTarget>
-        <PreviousSession Words="18" Characters="90" Date="2021-03-24 17:37:05 +0000"/>
+        <PreviousSession Words="21" Characters="107" Date="2021-03-24 17:37:05 +0000"/>
     </ProjectTargets>
     <Collections>
         <Collection Type="Binder" ID="AD143D59-65BD-4266-B1C7-C14D1E32B820" Color="0.901961 0.917647 0.933333">
