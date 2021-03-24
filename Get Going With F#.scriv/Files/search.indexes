@@ -162,7 +162,7 @@ How do you clean the Release build?</Text>
         </Document>
         <Document ID="9">
             <Title>But Wait!</Title>
-            <Text>I know what you're thinking!: There is something wrong here! Where is the function. There is a printfn function being called here which is taking a single string parameter as input and then outputting that string parameter to the console. But where is our function? Isn't F# supposed to be a functional-first programming language where nearly everything is a function? That is true. But in this case to make things easier like scripting, the F# compiler is creating a &quot;main&quot; function for us which is then called by the .NET runtime. To make this more explicit we can wrap the &quot;Hello, World&quot; code inside of a function ourselves. So let's do that.
+            <Text>I know what you're thinking!: There is something wrong here! Where is the function? There is a printfn function being called here which is taking a single string parameter as input and then outputting that string parameter to the console. But where is our function? Isn't F# supposed to be a functional-first programming language where nearly everything is a function? That is true. But in this case to make things easier like scripting, the F# compiler is creating a &quot;main&quot; function for us which is then called by the .NET runtime. To make this more explicit we can wrap the &quot;Hello, World&quot; code inside of a function ourselves. So let's do that.
 Change the code to the following:
 
 1: open System
@@ -180,6 +180,13 @@ The code should be self-explanatory. Line 1 &quot;open&quot;s and makes the clas
             <Text>Now that you've written and run &quot;Hello, World!&quot; in F# you should take a tour of F#. Start at the following URL http://docs.microsoft.com/en-us/dotnet/fsharp/tour. Once you feel ready to continue reading this book come back here.
 By now you should have a fairly good grasp of functional programming and F# in particular. You could stop reading this book now and continue your exploration of F# as needed for the particular set of projects that you are working on.
 So what value does this book on F# have/ Well, read on and you can decide for yourself whether the book fulfills any purpose and hence has any value. The remainder of this book contains mini-projects on various interesting topics from UIs to Neural Networks to 3D Computer Graphics. Each of the projects was chosen to illustrate how to solve a particular type of problem with F#. In the next chapter we will tackle the problem of writing UIs with F#. By the end of the chapter we wil have a fairly functional fractal image generator for Julia and Mandlebrot sets. So without further delay let's get started!</Text>
+        </Document>
+        <Document ID="11">
+            <Title>Exercises</Title>
+            <Text>Modify the &quot;Hello, World!&quot; program to ask the user for his/her name and print out &quot;Hello &lt;name of user&gt;!&quot; instead of &quot;Hello, World!&quot;.
+Write a function which will take two numbers and add them together and return answer.
+Write a function which will compute the factorial of a number. You will need to research how to write recursive functions in F#.
+Write a function which will compute the nth term in the Fibonacci sequence.</Text>
         </Document>
     </Documents>
 </SearchIndexes>
