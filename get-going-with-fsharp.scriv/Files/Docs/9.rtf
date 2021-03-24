@@ -4,4 +4,14 @@
 \paperw12240\paperh15840\margl1800\margr1800\margt1440\margb1440\fet2\ftnbj\aenddoc
 \pgnrestart\pgnstarts0
 \pard\plain \fi360\ltrch\loch {\f1\fs28\b0\i0 I know what you're thinking!: There is something wrong here! Where is the function. There is a }{\f0\fs28\b0\i0 printfn}{\f1\fs28\b0\i0  function being called here which is taking a single string parameter as input and then outputting that string parameter to the console. But where is our function? Isn't F# supposed to be a functional-first programming language where nearly everything is a function? That is true. But in this case to make things easier like scripting, the F# compiler is creating a "main" function for us which is then called by the .NET runtime. To make this more explicit we can wrap the "Hello, World" code inside of a function ourselves. So let's do that.}
-\par\plain {\f1\fs28\b0\i0 Change the code to the following:}}
+\par\plain {\f1\fs28\b0\i0 Change the code to the following:}
+\par\plain \f1\fs28\b0\i0
+\par\plain {\f1\fs28\b0\i0 1: open System}
+\par\plain {\f1\fs28\b0\i0 2: }
+\par\plain {\f1\fs28\b0\i0 3: [<EntryPoint>]}
+\par\plain {\f1\fs28\b0\i0 4: let main(argv) =}
+\par\plain {\f1\fs28\b0\i0 5:   printfn "Hello, World!"}
+\par\plain {\f1\fs28\b0\i0 6:   0}
+\par\plain \f1\fs28\b0\i0
+\par\plain {\f1\fs28\b0\i0 Type in }{\f0\fs28\b0\i0 dotnet run}{\f1\fs28\b0\i0  to check that everything still works fine.}
+\par\plain {\f1\fs28\b0\i0 The code should be self-explanatory. Line 1 "open"s and makes the classes and objects in the .NET System library available for use by our little program. Line 3 sets the entry point for our program. Line 4 defines our function which takes in a string argument list as its one and only parameter. This parameter is not used in our program. Line 5 prints our "Hello, World!" message and finally line 6 returns the exit value. Notice that on line 6 we don't need to write "return 0" as in some other languages that you may be familiar with, you just write down the actual return value and that's it!}}
