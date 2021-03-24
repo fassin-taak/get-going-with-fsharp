@@ -144,12 +144,12 @@ When used in the header or footer, gets replaced with the current page number.
         </Document>
         <Document ID="6">
             <Title>Summary</Title>
-            <Text>In this chapter your wrote your first F# program!: A simple &quot;Hello, World!&quot; program.
-To do this you setup your system to write F# programs. You downloaded and installed the .NET SDK (if you didn't already have it installed) and then created a new console project. You then modified the code to print &quot;Hello, World!&quot; to the console.</Text>
+            <Text>In this chapter your wrote your first F# program!: A simple &quot;Hello, World!&quot; program. To do this you setup your system to write F# programs. You downloaded and installed the .NET SDK (if you didn't already have it installed) and then created a new console project. You then modified the code to print &quot;Hello, World!&quot; to the console.
+You then took a tour of F# from around the web and returned to the book to complete some simple exercises. You also read some documentation on the dotnet command and played around with the command a little. You could say you are a beginner F# programmer, maybe even an intermediate F# programmer who is fairly competent at thinking about problems in a functional way. You are ready now to tackle what every programmer dreads and loves at the same time: UIs!</Text>
         </Document>
         <Document ID="7">
             <Title>The dotnet Command</Title>
-            <Text>Your should familiarize yourself with the dotnet command as you will be using it a lot. You can get help by typing in dotnet -h and also by searching and reading the Microsoft documentation online. Here are a few exercises that you can try after you've familiarized yourself with the dotnet command.</Text>
+            <Text>You should also familiarize yourself with the dotnet command as you will be using it a lot. You can get help by typing in dotnet -h and also by searching and reading the Microsoft documentation online. Here are a few exercises that you can try after you've familiarized yourself with the dotnet command.</Text>
         </Document>
         <Document ID="8">
             <Title>Exercises</Title>
@@ -162,7 +162,7 @@ How do you clean the Release build?</Text>
         </Document>
         <Document ID="9">
             <Title>But Wait!</Title>
-            <Text>I know what you're thinking!: There is something wrong here! Where is the function? There is a printfn function being called here which is taking a single string parameter as input and then outputting that string parameter to the console. But where is our function? Isn't F# supposed to be a functional-first programming language where nearly everything is a function? That is true. But in this case to make things easier like scripting, the F# compiler is creating a &quot;main&quot; function for us which is then called by the .NET runtime. To make this more explicit we can wrap the &quot;Hello, World&quot; code inside of a function ourselves. So let's do that.
+            <Text>I know what you're thinking!: There is something wrong here! Where is the function? There is a printfn function being called here which is taking a single string parameter as input and then outputting that string parameter to the console. But where is our function? Isn't F# supposed to be a functional-first programming language where nearly everything is a function? That is true. But in this case to make things easier to do like simple scripting, the F# compiler is creating a &quot;main&quot; function for us which is then called by the .NET runtime. To make this more explicit we can wrap the &quot;Hello, World&quot; code inside of a function ourselves. So let's do that.
 Change the code to the following:
 
 1: open System
@@ -173,13 +173,11 @@ Change the code to the following:
 6:   0
 
 Type in dotnet run to check that everything still works fine.
-The code should be self-explanatory. Line 1 &quot;open&quot;s and makes the classes and objects in the .NET System library available for use by our little program. Line 3 sets the entry point for our program. Line 4 defines our function which takes in a string argument list as its one and only parameter. This parameter is not used in our program. Line 5 prints our &quot;Hello, World!&quot; message and finally line 6 returns the exit value. Notice that on line 6 we don't need to write &quot;return 0&quot; as in some other languages that you may be familiar with, you just write down the actual return value and that's it!</Text>
+The code should be self-explanatory. Line 1 &quot;open&quot;s and makes the classes and objects in the .NET System library available for use by our little program. Line 3 sets the entry point for our program. Line 4 defines our function which takes in a string argument list as its one and only parameter. This parameter is not used in our program. Line 5 prints our &quot;Hello, World!&quot; message and finally line 6 returns the exit value. Notice that on line 6 we don't need to write &quot;return 0&quot; as in some other languages that you may be familiar with. You just write down the actual return value and that's it!</Text>
         </Document>
         <Document ID="10">
             <Title>Take a Tour of F#</Title>
-            <Text>Now that you've written and run &quot;Hello, World!&quot; in F# you should take a tour of F#. Start at the following URL http://docs.microsoft.com/en-us/dotnet/fsharp/tour. Once you feel ready to continue reading this book come back here.
-By now you should have a fairly good grasp of functional programming and F# in particular. You could stop reading this book now and continue your exploration of F# as needed for the particular set of projects that you are working on.
-So what value does this book on F# have/ Well, read on and you can decide for yourself whether the book fulfills any purpose and hence has any value. The remainder of this book contains mini-projects on various interesting topics from UIs to Neural Networks to 3D Computer Graphics. Each of the projects was chosen to illustrate how to solve a particular type of problem with F#. In the next chapter we will tackle the problem of writing UIs with F#. By the end of the chapter we wil have a fairly functional fractal image generator for Julia and Mandlebrot sets. So without further delay let's get started!</Text>
+            <Text>Now that you've written and run &quot;Hello, World!&quot; in F# you should take a tour of F#. Start at the following URL http://docs.microsoft.com/en-us/dotnet/fsharp/tour. Once you feel ready to continue reading this book come back here and do the exercises in the following section.</Text>
         </Document>
         <Document ID="11">
             <Title>Exercises</Title>
@@ -187,6 +185,28 @@ So what value does this book on F# have/ Well, read on and you can decide for yo
 Write a function which will take two numbers and add them together and return answer.
 Write a function which will compute the factorial of a number. You will need to research how to write recursive functions in F#.
 Write a function which will compute the nth term in the Fibonacci sequence.</Text>
+        </Document>
+        <Document ID="12">
+            <Title>What Next?</Title>
+            <Text>By now you should have a fairly good grasp of functional programming and F# in particular. You could stop reading this book now and continue your exploration of F# as needed for the particular set of projects that you are working on.
+So what value does this book on F# have? Well, read on and you can decide for yourself whether the book fulfills any purpose and hence has any value. The remainder of this book contains mini-projects on various interesting topics from UIs to Neural Networks to 3D Computer Graphics. Each of the projects was chosen to illustrate how to solve a particular type of problem with F#. In the next chapter we will tackle the problem of writing UIs with F#. By the end of the chapter we wil have a fairly functional fractal image generator for Julia and Mandlebrot sets. So without further delay let's get started!</Text>
+        </Document>
+        <Document ID="13">
+            <Title>Writing UIs with F#</Title>
+            <Text>There are a number of paths available to programmers who decide to write UIs with F#:
+
+Avalonia.FuncUI (Cross-Platform)
+Elmish.WPF (Windows Only)
+Use Windows Forms or WPF directly (Windows Only)
+
+We will take the option 1, the Avalonia.FuncUI route since it is cross-platform. Avalonia.FuncUI is fairly intuitive to use and will suit our purposes admirably. If you want, you can explore the alternatives starting at http://fsharp.org/use/desktop-apps/.
+First read a little on how to get started with Avalonia.FuncUI at the following URL:
+
+https://avaloniacommunity.github.io/Avalonia.FuncUI.Docs/
+
+Afterwards create a new &quot;Basic Template&quot; project. Check to make sure everything compiles and runs smoothly. A description of the files created in the &quot;Basic Template&quot; project is at the URL:
+
+https://avaloniacommunity.github.io/Avalonia.FuncUI.Docs/guides/Basic-Template.html</Text>
         </Document>
     </Documents>
 </SearchIndexes>

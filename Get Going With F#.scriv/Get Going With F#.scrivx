@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ScrivenerProject Template="No" Version="1.5" Creator="SCRWIN-1.9.16.0" Device="SSDVPS-96525" Modified="2021-03-24 20:22:44 +0000" ModID="846BD7CD-AF16-4CA7-8331-AF24A6F77985">
+<ScrivenerProject Template="No" Version="1.5" Creator="SCRWIN-1.9.16.0" Device="SSDVPS-96525" Modified="2021-03-24 23:32:38 +0000" ModID="AADA242A-D60A-4FEF-95C6-C124F13A7BDE">
     <Binder>
-        <BinderItem ID="0" UUID="9F69BDD5-CA7F-492E-9DF1-409A34B3DAB8" Created="2021-03-21 22:54:28 +0000" Modified="2021-03-21 22:54:28 +0000" Type="DraftFolder">
+        <BinderItem ID="0" UUID="9F69BDD5-CA7F-492E-9DF1-409A34B3DAB8" Created="2021-03-21 22:54:28 +0000" Modified="2021-03-24 23:17:43 +0000" Type="DraftFolder">
             <Title>Draft</Title>
             <MetaData>
                 <IncludeInCompile>Yes</IncludeInCompile>
@@ -27,23 +27,23 @@
                                 <Target Type="Words">0</Target>
                             </TextSettings>
                             <Children>
-                                <BinderItem ID="9" UUID="59B61A79-E615-47EF-9293-6B22EAC52B96" Created="2021-03-24 15:43:35 +0000" Modified="2021-03-24 20:22:41 +0000" Type="Text">
+                                <BinderItem ID="9" UUID="59B61A79-E615-47EF-9293-6B22EAC52B96" Created="2021-03-24 15:43:35 +0000" Modified="2021-03-24 23:01:39 +0000" Type="Text">
                                     <Title>But Wait!</Title>
                                     <MetaData>
                                         <IncludeInCompile>Yes</IncludeInCompile>
                                     </MetaData>
                                     <TextSettings>
-                                        <TextSelection>83,0</TextSelection>
+                                        <TextSelection>1389,0</TextSelection>
                                         <Target Type="Words">0</Target>
                                     </TextSettings>
                                 </BinderItem>
-                                <BinderItem ID="10" UUID="285CC651-29A0-46B8-8B34-70C96260964F" Created="2021-03-24 19:48:41 +0000" Modified="2021-03-24 19:57:30 +0000" Type="Text">
+                                <BinderItem ID="10" UUID="285CC651-29A0-46B8-8B34-70C96260964F" Created="2021-03-24 19:48:41 +0000" Modified="2021-03-24 23:07:09 +0000" Type="Text">
                                     <Title>Take a Tour of F#</Title>
                                     <MetaData>
                                         <IncludeInCompile>Yes</IncludeInCompile>
                                     </MetaData>
                                     <TextSettings>
-                                        <TextSelection>1070,0</TextSelection>
+                                        <TextSelection>274,0</TextSelection>
                                         <Target Type="Words">0</Target>
                                     </TextSettings>
                                 </BinderItem>
@@ -51,21 +51,23 @@
                                     <Title>Exercises</Title>
                                     <MetaData>
                                         <IncludeInCompile>Yes</IncludeInCompile>
+                                        <FileExtension>rtf</FileExtension>
                                     </MetaData>
                                     <TextSettings>
-                                        <TextSelection>424,0</TextSelection>
+                                        <TextSelection>219,0</TextSelection>
                                         <Target Type="Words">0</Target>
                                     </TextSettings>
                                 </BinderItem>
                             </Children>
                         </BinderItem>
-                        <BinderItem ID="7" UUID="93EBAA22-CA91-4CE1-BF56-3CD5DFB49BA1" Created="2021-03-24 14:32:14 +0000" Modified="2021-03-24 15:05:50 +0000" Type="Text">
+                        <BinderItem ID="7" UUID="93EBAA22-CA91-4CE1-BF56-3CD5DFB49BA1" Created="2021-03-24 14:32:14 +0000" Modified="2021-03-24 23:14:56 +0000" Type="Text">
                             <Title>The dotnet Command</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>rtf</FileExtension>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>273,0</TextSelection>
+                                <TextSelection>16,0</TextSelection>
                                 <Target Type="Words">0</Target>
                             </TextSettings>
                             <Children>
@@ -81,17 +83,36 @@
                                 </BinderItem>
                             </Children>
                         </BinderItem>
-                        <BinderItem ID="6" UUID="8B13878F-F44C-492A-A0B9-46794D018BEB" Created="2021-03-24 01:38:41 +0000" Modified="2021-03-24 02:28:05 +0000" Type="Text">
+                        <BinderItem ID="12" UUID="EEA36D32-9ED9-484F-82F1-21B848F87C54" Created="2021-03-24 23:03:08 +0000" Modified="2021-03-24 23:03:30 +0000" Type="Text">
+                            <Title>What Next?</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>274,0</TextSelection>
+                                <Target Type="Words">0</Target>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="6" UUID="8B13878F-F44C-492A-A0B9-46794D018BEB" Created="2021-03-24 01:38:41 +0000" Modified="2021-03-24 23:17:09 +0000" Type="Text">
                             <Title>Summary</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>331,0</TextSelection>
+                                <TextSelection>717,0</TextSelection>
                                 <Target Type="Words">0</Target>
                             </TextSettings>
                         </BinderItem>
                     </Children>
+                </BinderItem>
+                <BinderItem ID="13" UUID="29B15FEC-51C7-45DF-9D68-44530E02A35A" Created="2021-03-24 23:19:05 +0000" Modified="2021-03-24 23:32:36 +0000" Type="Folder">
+                    <Title>Writing UIs with F#</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <Target Type="Words">0</Target>
+                    </TextSettings>
                 </BinderItem>
             </Children>
         </BinderItem>
@@ -145,7 +166,7 @@
     <ProjectTargets>
         <DraftTarget Type="Words" CountIncludedOnly="No" CurrentCompileGroupOnly="No">0</DraftTarget>
         <SessionTarget Type="Words" CountDraftOnly="No" AllowNegatives="No" ResetType="Midnight" DeterminedFromDeadline="No" CanWriteOnDeadlineDate="Yes" WritingDays="">0</SessionTarget>
-        <PreviousSession Words="0" Characters="0" Date="2021-03-24 20:21:35 +0000"/>
+        <PreviousSession Words="220" Characters="1392" Date="2021-03-24 20:21:35 +0000"/>
     </ProjectTargets>
     <Collections>
         <Collection Type="Binder" ID="AD143D59-65BD-4266-B1C7-C14D1E32B820" Color="0.901961 0.917647 0.933333">
