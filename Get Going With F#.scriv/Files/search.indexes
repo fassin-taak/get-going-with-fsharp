@@ -204,9 +204,76 @@ First read a little on how to get started with Avalonia.FuncUI at the following 
 
 https://avaloniacommunity.github.io/Avalonia.FuncUI.Docs/
 
-Afterwards create a new &quot;Basic Template&quot; project. Check to make sure everything compiles and runs smoothly. A description of the files created in the &quot;Basic Template&quot; project is at the URL:
+Install Avalonia.FuncUI and then afterwards create a new &quot;Basic Template&quot; project. Check to make sure everything compiles and runs smoothly. A description of the files created in the &quot;Basic Template&quot; project is at the URL:
 
-https://avaloniacommunity.github.io/Avalonia.FuncUI.Docs/guides/Basic-Template.html</Text>
+https://avaloniacommunity.github.io/Avalonia.FuncUI.Docs/guides/Basic-Template.html
+
+Modify the title of the MainWindow class to &quot;Fractals&quot; and then change the width and height of the window to 500 and 500 respectively. Next modify Counter.fs to display a window like the one shown in the figure below:
+
+￼
+
+If you get stuck, or want to check your code against mine here is what I wrote:
+
+01: namespace Fractals
+02: 
+03: module Counter =
+04:     open Avalonia.Controls
+05:     open Avalonia.FuncUI.DSL
+06:     open Avalonia.Layout
+07:     
+08:     /// The fractal type.
+09:     type FractalType = Julia | Mandelbrot
+10: 
+11:     /// The state.
+12:     type State = { ft : FractalType }
+13: 
+14:     /// Initializes the fractal type.
+15:     let Init = { ft = Julia }
+16: 
+17:     /// Updates the fractal type.
+18:     let Update (msg: FractalType) (state: State) : State =
+19:       match msg with
+20:       | Julia -&gt; { state with ft = Julia }
+21:       | Mandelbrot -&gt; { state with ft = Mandelbrot }
+22: 
+23:     
+24:     let View (state: State) (dispatch) =
+25:         DockPanel.create [
+26:             DockPanel.children [
+27:                 DockPanel.create [
+28:                     DockPanel.children [
+29:                         Button.create [
+30:                             Button.dock Dock.Top
+31:                             Button.height 250.0
+32:                             Button.onClick (fun _ -&gt; dispatch Julia)
+33:                             Button.content &quot;Julia&quot;
+34:                         ]                
+35:                         Button.create [
+36:                             Button.dock Dock.Bottom
+37:                             Button.height 250.0
+38:                             Button.onClick (fun _ -&gt; dispatch Mandelbrot)
+39:                             Button.content &quot;Mandel&quot;
+40:                         ]
+41:                     ]
+42:                 ]
+43:                 TextBlock.create [
+44:                     TextBlock.dock Dock.Right
+45:                     TextBlock.fontSize 48.0
+46:                     TextBlock.verticalAlignment VerticalAlignment.Center
+47:                     TextBlock.horizontalAlignment HorizontalAlignment.Center
+48:                     TextBlock.text (string state.ft)
+49:                 ]
+50:             ]
+51:         ]
+
+If you've written your code correctly here is what should happen when you start Fractals.
+
+A window should pop up like the one in figure 1.
+Pressing the &quot;Mandel&quot; button should change the text in the TextBlock to &quot;Mandelbrot&quot;.
+Pressing the &quot;Julia&quot; button should change the text in the TextBlock to &quot;Julia&quot;.
+
+If something doesn't work as expected then check your code carefully for any mistakes and compare your code with mine if necessary.
+Everything working correctly then? Great! Let's continue then.</Text>
         </Document>
     </Documents>
 </SearchIndexes>
