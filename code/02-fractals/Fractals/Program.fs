@@ -18,8 +18,7 @@ type MainWindow() as this =
         //this.VisualRoot.VisualRoot.Renderer.DrawFps <- true
         //this.VisualRoot.VisualRoot.Renderer.DrawDirtyRects <- true
 
-
-        Elmish.Program.mkSimple (fun () -> Counter.Init) Counter.Update Counter.View
+        Elmish.Program.mkSimple (fun () -> Fractals.Init) Fractals.Update Fractals.View
         |> Program.withHost this
         |> Program.run
 
