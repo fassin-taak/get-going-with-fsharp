@@ -1,28 +1,13 @@
 {\rtf1\ansi\ansicpg1252\uc1\deff0
 {\fonttbl{\f0\fmodern\fcharset0\fprq2 CourierNewPSMT;}{\f1\fmodern\fcharset0\fprq2 TimesNewRomanPSMT;}}
-{\colortbl;\red0\green0\blue0;\red255\green255\blue255;\red0\green128\blue0;\red0\green0\blue255;\red163\green21\blue21;}
+{\colortbl;\red0\green0\blue0;\red255\green255\blue255;\red34\green177\blue76;\red63\green72\blue204;\red163\green21\blue21;}
 \paperw12240\paperh15840\margl1800\margr1800\margt1440\margb1440\fet2\ftnbj\aenddoc
 \pgnrestart\pgnstarts0
 \pard\plain \fi360\ltrch\loch {\f1\fs28\b0\i0 As is traditional when learning most programming languages we will begin by writing a \loch\af1\hich\af1\dbch\af1\uc1\u8220\'93Hello, World!\u8221\'94 program. To do so first download and install the .NET SDK. You search the Internet for instructions how to download and install the .NET SDK. You are also free to choose whichever OS you desire.}
 \par\plain {\f1\fs28\b0\i0 Open a command terminal and type in}
 \par\plain \f0\fs28\b0\i0
-\par\plain {\f0\fs28\b0\i0 dotnet new console -lang "F#" -o hello\line \line cd }{\f1\fs28\b0\i0 into the directory hello which was created when you typed in the above command. Then, open the file }{\f0\fs28\b0\i0 Program.fs }{\f1\fs28\b0\i0 which was created when the directory was created. It should look something like:\line \line }{\f0\fs24\b0\i0\cf3 // Learn more about F# at http://docs.microsoft.com/dotnet/fsharp\line \line }{\f0\fs24\b0\i0\cf4 open}{\f0\fs24\b0\i0\cf1  System}
-\par\pard\plain \ltrch\loch \f0\fs24\b0\i0\cf1
-\par\plain {\f0\fs24\b0\i0\cf3 // Define a function to construct a message to print}
-\par\plain {\f0\fs24\b0\i0\cf4 let}{\f0\fs24\b0\i0\cf1  from whom =}
-\par\plain {\f0\fs24\b0\i0\cf1     sprintf }{\f0\fs24\b0\i0\cf5 "from %s"}{\f0\fs24\b0\i0\cf1  whom}
-\par\plain \f0\fs24\b0\i0\cf1
-\par\plain {\f0\fs24\b0\i0\cf1 [<EntryPoint>]}
-\par\plain {\f0\fs24\b0\i0\cf4 let}{\f0\fs24\b0\i0\cf1  main argv =}
-\par\plain {\f0\fs24\b0\i0\cf1     }{\f0\fs24\b0\i0\cf4 let}{\f0\fs24\b0\i0\cf1  message = from }{\f0\fs24\b0\i0\cf5 "F#"}{\f0\fs24\b0\i0\cf1  }{\f0\fs24\b0\i0\cf3 // Call the function}
-\par\plain {\f0\fs24\b0\i0\cf1     printfn }{\f0\fs24\b0\i0\cf5 "Hello world %s"}{\f0\fs24\b0\i0\cf1  message}
-\par\plain {\f0\fs24\b0\i0\cf1     0 }{\f0\fs24\b0\i0\cf3 // return an integer exit code}
-\par\pard\plain \fi360\ltrch\loch {\f1\fs28\b0\i0 \line Replace the contents of the file with just:}
-\par\plain \f1\fs28\b0\i0
-\par\pard\plain \ltrch\loch {\f0\fs24\b0\i0\cf1 printfn }{\f0\fs24\b0\i0\cf5 "Hello, World!"}
-\par\pard\plain \fi360\ltrch\loch {\f1\fs28\b0\i0 \line Now go back to the terminal and type in:}
-\par\plain \f1\fs28\b0\i0
+\par\pard\plain \fi360\sa200\sl276\slmult1\ltrch\loch {\f0\fs28\b0\i0 dotnet new console -lang "F#" -o hello\line \line cd }{\f1\fs28\b0\i0 into the directory hello which was created when you typed in the above command. Then, open the file }{\f0\fs28\b0\i0 Program.fs }{\f1\fs28\b0\i0 which was created when the directory was created. It should look something like:\line \line }{\f0\fs22    0:    }{\f0\fs22\cf3 // Learn more about F# at http://docs.microsoft.com/dotnet/fsharp }{\f0\fs22\cf1 \line    1:     \line    2:    }{\f0\fs22\cf4 open }{\f0\fs22\cf1 System \line    3:     \line    4:    }{\f0\fs22\cf3 // Define a function to construct a message to print }{\f0\fs22\cf1 \line    5:    }{\f0\fs22\cf4 let }{\f0\fs22\cf1 from whom = \line    6:        sprintf }{\f0\fs22\cf5 "from %s" }{\f0\fs22\cf1 whom \line    7:     \line    8:    [<EntryPoint>] \line    9:    }{\f0\fs22\cf4 let }{\f0\fs22\cf1 main argv = \line   10:        }{\f0\fs22\cf4 let }{\f0\fs22\cf1 message = from }{\f0\fs22\cf5 "F#" }{\f0\fs22\cf3 // Call the function }{\f0\fs22\cf1 \line   11:        printfn }{\f0\fs22\cf5 "Hello world %s" }{\f0\fs22\cf1 message \line   12:        0 }{\f0\fs22\cf3 // return an integer exit code }{\f0\fs22\cf1 \line }{\f1\fs28\b0\i0 \line Replace the contents of the file with just:}
+\par\pard\plain \sa200\sl276\slmult1\ltrch\loch {\f0\fs22   0:    printfn }{\f0\fs22\cf5 "Hello, World!" }{\f0\fs22\cf1 \line }{\f1\fs28\b0\i0 \line Now go back to the terminal and type in:}
+\par\pard\plain \fi360\ltrch\loch \f1\fs28\b0\i0
 \par\plain {\f0\fs24\b0\i0 dotnet run}
-\par\plain {\f1\fs28\b0\i0 \line Pretty cool! Right? One line of code is all that's needed to print out a message to the console and a one line command is all you need to build and run the executable that prints out the message. That's a lot better than C or C++ and just as good as Python or any other scripting language.}
-\par\plain \f1\fs28\b0\i0
-\par\plain {\f1\fs28\b0\i0 \line \line }}
+\par\plain {\f1\fs28\b0\i0 \line Pretty cool! Right? One line of code is all that's needed to print out a message to the console and a one line command is all you need to build and run the executable that prints out the message. That's a lot better than C or C++ and just as good as Python or any other scripting language.}}

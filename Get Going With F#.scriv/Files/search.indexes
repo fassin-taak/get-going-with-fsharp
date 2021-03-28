@@ -47,11 +47,7 @@ Now go back to the terminal and type in:
 
 dotnet run
 
-Pretty cool! Right? One line of code is all that's needed to print out a message to the console and a one line command is all you need to build and run the executable that prints out the message. That's a lot better than C or C++ and just as good as Python or any other scripting language.
-
-
-
-</Text>
+Pretty cool! Right? One line of code is all that's needed to print out a message to the console and a one line command is all you need to build and run the executable that prints out the message. That's a lot better than C or C++ and just as good as Python or any other scripting language.</Text>
         </Document>
         <Document ID="5">
             <Title>Compiler Codes</Title>
@@ -145,7 +141,8 @@ When used in the header or footer, gets replaced with the current page number.
         <Document ID="6">
             <Title>Summary</Title>
             <Text>In this chapter your wrote your first F# program!: A simple &quot;Hello, World!&quot; program. To do this you setup your system to write F# programs. You downloaded and installed the .NET SDK (if you didn't already have it installed) and then created a new console project. You then modified the code to print &quot;Hello, World!&quot; to the console.
-You then took a tour of F# from around the web and returned to the book to complete some simple exercises. You also read some documentation on the dotnet command and played around with the command a little. You could say you are a beginner F# programmer, maybe even an intermediate F# programmer who is fairly competent at thinking about problems in a functional way. You are ready now to tackle what every programmer dreads and loves at the same time: UIs!</Text>
+You then took a tour of F# from around the web and returned to the book to complete some simple exercises. You also read some documentation on the dotnet command and played around with the command a little. You could say you are a beginner F# programmer, maybe even an intermediate F# programmer who is fairly competent at thinking about problems in a functional way. You are ready now to tackle what every programmer dreads and loves at the same time: UIs!
+</Text>
         </Document>
         <Document ID="7">
             <Title>The dotnet Command</Title>
