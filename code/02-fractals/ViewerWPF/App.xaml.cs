@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Elmish.WPF;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -6,7 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Fractals {
+namespace ViewerWPF {
   /// <summary>
   /// Interaction logic for App.xaml
   /// </summary>
@@ -17,7 +18,7 @@ namespace Fractals {
 
     private void StartElmish(object sender, EventArgs e) {
       this.Activated -= StartElmish;
-      var program = new Elmish. Elmish.Program<MainWindow, Fractals.Fractals.Model, Fractals.Fractals.Msg, Fractals.Fractals.View>(MainWindow);
+      Fractals.Fractals.Main(MainWindow);
     }
   }
 }

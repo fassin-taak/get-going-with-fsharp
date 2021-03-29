@@ -26,13 +26,12 @@ module Fractals =
 
   /// Binds the "FractalType" string from XAML views to the
   /// Model.
-  let View () =
+  let Bindings () =
     [
       "FractalType" |> Binding.twoWay(
         (fun m -> m.Type),
         (fun newValue m -> newValue |> SetFractalType ))
     ]
 
-  let main window =
-    Program.mkSimpleWpf Init Update View
-    |> Program.runWindow window
+  Program.mkSimpleWpf (fun() -> Init) (Update) (Bindings)
+  |> Program.startElmishLoop window
