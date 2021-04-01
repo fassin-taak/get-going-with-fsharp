@@ -189,19 +189,51 @@ So what value does this book on F# have? Well, read on and you can decide for yo
         </Document>
         <Document ID="13">
             <Title>Writing UIs with F#</Title>
-            <Text>In this chapter we will be using .NET 4.8 because using the latest 5.0 version of .NET causes compilation errors.
-There are a number of paths available to programmers who decide to write UIs with F#:
+            <Text>There are a number of paths available to programmers who decide to write UIs with F#:
 
 Avalonia.FuncUI (Cross-Platform)
 Elmish.WPF (Windows Only)
 Use Windows Forms or WPF directly (Windows Only)
 
-We will take option 2, the Elmish.WPF route, even though it is a Windows only route because it is a battle-tested UI framework with excellent documentation. If you want to be cross-platform then option 1, Avalonia.FuncUI is fairly intuitive to use and will suit your purposes admirably, but at the time of writing (March 26th 2021) the documentation is so-so. So unless you like searching the web for answers and asking questions on Stack Exchange I don't recommend this route. Instead wait for 6 months and come back to Avalonia.FuncUI if you still need to write UIs in F# — the documentation will have improved by then. Option 3 is also available for those who must use Windows Forms or WPF directly in their apps.
-You can find out more information about the three options available at http://fsharp.org/use/desktop-apps/. Since we are going to be using Elmish.WPF read https://github.com/elmish/Elmish.WPF#getting-started-with-elmishwpf first and then come back here.</Text>
+If you want to be cross-platform then option 1 is your best bet. Avalonia.FuncUI is fairly intuitive to use and will suit your purposes admirably, but at the time of writing (March 26th 2021) the documentation is so-so. So unless you like searching the web for answers and asking questions on Stack Exchange I don't recommend this route. Instead wait for 6 months and come back to Avalonia.FuncUI if you still need to write UIs in F#—the documentation will have improved by then.
+Option 2, the Elmish.WPF route, is a Windows only route. It is a battle-tested UI framework with good documentation. It uses the model/view/update (MVU) pattern in its implementation. We will talk about the MVU pattern shortly.
+Option 3 is also available for those who want to use their prior knowledge on Windows Forms or WPF directly in their apps on Windows. This is the route (with WPF) that we will take in this book as more readers will be aware of WPF than Avalonia.FuncUI or Elmish.WPF.
+You can find out more information about the three options available at http://fsharp.org/use/desktop-apps/. Since we are going to be using WPF directly on Windows read this excellent article also to get started with WPF using F#: https://www.c-sharpcorner.com/article/create-wpf-application-with-f-sharp-and-fsxaml/.</Text>
         </Document>
         <Document ID="14">
             <Title>Model</Title>
-            <Text>Open Library.fs in the Solution Explorer which is stored under the Viewer project. Your code should look like:
+            <Text>    We are going to follow the instructions at https://www.c-sharpcorner.com/article/create-wpf-application-with-f-sharp-and-fsxaml/. First Rename Library.fs to App.fs.
+    Then add a new XML file to the project and rename it App.xaml: Right click on the Viewer project in the Solution Explorer and select Add &gt; New Item… Call the new file App.xaml
+￼
+Your solution explorer should now look like:
+￼
+Replace the code in App.xaml with:
+   1:    &lt;Application 
+   2:        xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot; 
+   3:        xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot; 
+   4:        StartupUri=&quot;MainWindow.xaml&quot;&gt; 
+   5:     
+   6:      &lt;Application.Resources&gt; 
+   7:      &lt;/Application.Resources&gt; 
+   8:     
+   9:    &lt;/Application&gt; 
+
+Then replace the contents of App.fs with the following:
+   1:    module App   
+   2:     
+   3:    open System   
+   4:    open FsXaml   
+   5:     
+   6:    type App = XAML&lt;&quot;App.xaml&quot;&gt;   
+   7:     
+   8:    [&lt;EntryPoint;STAThread&gt;]   
+   9:    let main argv =    
+  10:      App().Run()   
+
+As mentioned in the blog, line 6 generates a new App type.
+
+
+pen Library.fs in the Solution Explorer which is stored under the Viewer project. Your code should look like:
    1:    namespace Viewer 
    2:     
    3:    module Say = 
@@ -245,7 +277,7 @@ Finally, we define a message type called Msg which is passed to an Update functi
   22:        match msg with 
   23:        | SetFractalType t -&gt;  m with Type = t  
 
-The code above should be fairly straightforward to follow if you took the F# tour in chapter 1, have been reading the official F# documentation, did the exercises and have read the introduction to Elmish.WPF.
+The code above should be fairly straightforward to follow if you took the F# tour in chapter 1, have been reading the official F# documentation, did the exercises and have read the introduction to FsXaml.
  
 </Text>
         </Document>
@@ -257,7 +289,7 @@ https://visualstudio.microsoft.com/vs/community/</Text>
         </Document>
         <Document ID="16">
             <Title>Creating and Configuring the Project</Title>
-            <Text>Let's take what we've learned so far to create our Fractals viewer using Elmish.WPF for our UI. Since we are going to be working in Windows in this chapter we will used Visual Studio Community Edition for our development. Visual Studio Community Edition is free and you can download and install it from https://visualstudio.microsoft.com/vs/community/. Install the F# tools when you install Visual Studio Community Edition. Take some time to learn how to use Visual Studio, especially features such as debugging and performance profiling. 
+            <Text>Let's take what we've learned so far to create our Fractals viewer using WPF and FsXaml for our UI. Since we are going to be working in Windows in this chapter we will use Visual Studio Community Edition for our development. Visual Studio Community Edition is free and you can download and install it from https://visualstudio.microsoft.com/vs/community/. Install the F# tools when you install Visual Studio Community Edition. Take some time to learn how to use Visual Studio, especially features such as debugging and performance profiling you haven’t used them before. 
 When you are are ready, type in the following commands into a Powershell command prompt to create the skeleton of the Fractals viewer project:
 
 1: dotnet new sln -n Fractals
@@ -269,39 +301,25 @@ Now open up Visual Studio and open the solution file you just created. Right-cli
 
 ￼
 
-and select Edit Project File in the context menu that appears:
+and select Properties in the context menu that appears:
 
 ￼
 
-Edit the first line of the project file so that it reads:
-
-&lt;Project Sdk=&quot;Microsoft.NET&quot;&gt;
-
-And change the TargetFramework to net4.8 in the PropertyGroup &gt; TargetFramework element of the the project file. It should look similar to:
-
-&lt;PropertyGroup&gt;
-  &lt;TargetFramework&gt;net4.8&lt;/TargetFramework&gt;
-  &lt;GenerateDocumentationFile&gt;true&lt;/GenerateDocumentationFile&gt;
-  &lt;OutputType&gt;Library&lt;/OutputType&gt;
-&lt;/PropertyGroup&gt;
-
-Next, add a reference to the Elmish.WPF package. The way you do this is by right-clicking on the Viewer &gt; Dependencies &gt; Packages tree item:
+In the Viewer properties page, in the Application tab select Windows Application instead of Class Library from the Output type: menu.
 
 ￼
 
-and then selecting Manage NuGet Packages… from the context menu that appears.
+Now right-click on the Viewer project again and select Manage NuGet Packages … from the context menu that appears. In the NuGet package manager, type in FsXaml in the Browse box:
+
+
 
 ￼
 
-Then select the Browse tab and type in Elmish.WPF in the search box which appears below the Browse label.
+Select and install FsXaml.Wpf by pressing the downwards pointing arrow which appears when you hover your mouse over the FsXaml.Wpf button:
 
 ￼
 
-Press the black arrow pointing down next to the Elmish.WPF package:
-
-￼
-
-Finally, press the OK button on the confirmation dialog which appears.</Text>
+</Text>
         </Document>
         <Document ID="17">
             <Title>What is a Fractal?</Title>
@@ -353,7 +371,7 @@ Next add package references to FSharp.Core and Elmish.WPF using the same method 
         </Document>
         <Document ID="21">
             <Title>MVU</Title>
-            <Text>Elmish.WPF applications use the Model/View/Update (MVU) architecture to implement their UIs. The model stores information about what is being viewed and there is a connector which relays information from the model to the view and vice versa whenever the model is updated.
+            <Text>Our fractal viewer application will use the Model/View/Update (MVU) architecture to implement its UI. The model stores information about what is being viewed, the view displays the contents of the model, the connector the update object relays information from the model to the view and vice versa whenever the model is being updated.
 To make this more concrete, imagine you are writing a drawing application for colored pencils. The model would store information about the paper type—it’s thickness, the color of the paper, the pattern of texture, the paper’s reflectivity, and so on. It would also store information about the pencils available, their colors, whether they broke up easily when scraped across the paper, whether the pencil particles were soluble, and so on and on. The model would also store a representation of the paper and what had been drawn on the paper (perhaps as a multi-layer bitmap buffer).
 The view is responsible for rendering the model. It would take whatever is stored in the model and render it using whatever rendering technology is available or desired for the view implementation. The view implementation could, for example, use Windows Presentation Foundation (WPF) to render the contents of the pencil drawing model. Or the view could use one of those fancy new rendering APIs like DirectX 12 or Vulkan to render the pencil drawing. Or it might just use plain and simple good old OpenGL. Or the view implementation could be something like a colored PDF file. Or it could even be something more exotic like a computer controlled robotic hand which creates the drawing with real colored pencils. You get the idea!
 Finally, the update part of the MVU architecture connects the view to the model by passing messages to the model. Whenever the model needs to be changed, for example when a user moves the mouse across the table with the left mouse button held down indicating that a new stroke needs to be drawn, the updater intercepts these mouse interactions and modifies the model accordingly. The view is then notified about the new model state causing it to re-render the contents of the model.
@@ -366,11 +384,22 @@ So you can think of the model, view, and update implementations as forming a loo
         </Document>
         <Document ID="23">
             <Title>Preface</Title>
-            <Text>Welcome to Get Going With F#—A short book on using the F# programming language to get various things done. Each chapter in the book is a little mini-project where the reader is taught how to solve a particular type of problem using F#.
-This book assumes that you have programmed in at least one programming language for 2 to 3 years. Seasoned programmers with C#/C/C++ will have a special advantage. Unless otherwise stated, each chapter is stand-alone and can be read independently of the other ones. I recommend that you read chapter 1 first even though you may already be familiar with F#.
+            <Text>    Welcome to Get Going With F#—A short book on using the F# programming language to get various things done. Each chapter in the book is a little mini-project where the reader is taught how to solve a particular type of problem using F#.
+    This book assumes that you have programmed in at least one programming language for 2 to 3 years. Seasoned programmers with C#/C/C++ will have a special advantage. Unless otherwise stated, each chapter is stand-alone and can be read independently and out of order with the other ones, albeit, I do recommend that you read chapter 1 first even though you may already be familiar with F#.
 Chapter 1 is a very brief introduction to F# and functional programming. It ramps you up quickly so that you can start writing useful applications as soon as you have completed the chapter.
-Chapter 2 teaches you how to write a simple UI application using Elmish.WPF. At the end of the chapter you will have a fairly functional Julia and Mandelbrot set viewer.
+Chapter 2 teaches you how to write a simple UI application for viewing fractals using WPF and FsXaml. At the end of the chapter you will have a fairly functional Julia and Mandelbrot set viewer.
 </Text>
+        </Document>
+        <Document ID="24">
+            <Title>Hi my name is Raghavendra Chandrashekara. I am 44</Title>
+        </Document>
+        <Document ID="25">
+            <Title>FAQ</Title>
+            <Text>This section collects useful tricks, cheats, and patterns for using and programming with F#. If you found any particularly useful patterns that you like, please send them to me at raghavendra.chandrashekara@outlook.com. Thanks!</Text>
+        </Document>
+        <Document ID="26"/>
+        <Document ID="27">
+            <Title>Mathematics</Title>
         </Document>
     </Documents>
 </SearchIndexes>

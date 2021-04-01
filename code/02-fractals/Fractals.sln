@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.6.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Viewer", "Viewer\Viewer.fsproj", "{596B8C3D-96FA-4D5B-A0BD-CF2E93E2E6D8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{596B8C3D-96FA-4D5B-A0BD-CF2E93E2E6D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{596B8C3D-96FA-4D5B-A0BD-CF2E93E2E6D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{596B8C3D-96FA-4D5B-A0BD-CF2E93E2E6D8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{596B8C3D-96FA-4D5B-A0BD-CF2E93E2E6D8}.Debug|x64.Build.0 = Debug|Any CPU
+		{596B8C3D-96FA-4D5B-A0BD-CF2E93E2E6D8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{596B8C3D-96FA-4D5B-A0BD-CF2E93E2E6D8}.Debug|x86.Build.0 = Debug|Any CPU
+		{596B8C3D-96FA-4D5B-A0BD-CF2E93E2E6D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{596B8C3D-96FA-4D5B-A0BD-CF2E93E2E6D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{596B8C3D-96FA-4D5B-A0BD-CF2E93E2E6D8}.Release|x64.ActiveCfg = Release|Any CPU
+		{596B8C3D-96FA-4D5B-A0BD-CF2E93E2E6D8}.Release|x64.Build.0 = Release|Any CPU
+		{596B8C3D-96FA-4D5B-A0BD-CF2E93E2E6D8}.Release|x86.ActiveCfg = Release|Any CPU
+		{596B8C3D-96FA-4D5B-A0BD-CF2E93E2E6D8}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {80489F17-1FF6-43DE-B83D-BB3F38DA98FF}
+	EndGlobalSection
+EndGlobal
