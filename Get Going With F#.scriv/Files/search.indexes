@@ -3,7 +3,7 @@
     <Documents>
         <Document ID="3">
             <Title>An Introduction to F#</Title>
-            <Text>F# is a functional-first programming language. That is, F# is a programming language which emphasizes the functional aspect of programming to a greater extent than other languages you may be familiar with such as C#, Visual Basic .NET, Python and JavaScript. You will already be quite familiar with functions: you met them in high school when you drew a plot of the function, ￼ using your trusty Sharp EL 9300 graphing calculator or your favorite plotting program on the WWW (e.g. Desmos at https://desmos.com/calculator). Functions as opposed to objects are the first-class citizens of functional programming languages like F#. They allow one to think about and solve problems using features prominent in functional programming such as immutability, pipelining, partial application, type-inference, and strong typing. (Note that these features are not unique to F#, they exist in other functional programming languages, and indeed in ordinary imperative programming languages such as C#, Visual Basic .NET, Python and JavaScript).
+            <Text>F# is a functional-first programming language. That is, F# is a programming language which emphasizes the functional aspect of programming to a great extent. Much more so than other languages you may be familiar with such as C#, Visual Basic .NET, Python and JavaScript. You will already be quite familiar with functions: you met them in high school when you drew a plot of the function, ￼ using your trusty Sharp EL 9300 graphing calculator or your favorite plotting program on the WWW (e.g. Desmos at https://desmos.com/calculator). Functions as opposed to objects are the first-class citizens of functional programming languages like F#. They allow one to think about and solve problems using features prominent in functional programming such as immutability, pipelining, partial application, type-inference, and strong typing. (Note that these features are not unique to F#, they exist in other functional programming languages, and indeed in ordinary imperative programming languages such as C#, Visual Basic .NET, Python and JavaScript).
 F# was created by Don Syme who is an Australian Computer Scientist and Principal Researcher at Microsoft Research, Cambridge, UK. He is still very active in the F# community and makes contributions to the F# language to this day (March 24th 2021). You could call him the Grandfather of F# or the Supreme Leader of the F# community.
 F# allows one to think about a particular programming problem or task in a clean and simple way. It has the clean simplicity of Python while retaining the performance and type safety found in languages such as C++ and C#. F# can be used to write small programs with specific goals set at the start to large systems with open-ended goals.
 F# is fully open source and fully cross-platform. F# is integrated within Visual Studio and so can make full use of all the integrated development environment’s (IDE’s) features such as Intellisense, package management, documentation browser, etc. Alternatively, The Visual F# Tools can be downloaded from https://github.com/Microsoft/visualfsharp to develop F# programs without an IDE. On top of that, F# code can be run in Jupyter Notebooks hosted on Microsoft Azure Services.
@@ -202,7 +202,100 @@ You can find out more information about the three options available at http://fs
         </Document>
         <Document ID="14">
             <Title>Model</Title>
-            <Text>    We are going to follow the instructions at https://www.c-sharpcorner.com/article/create-wpf-application-with-f-sharp-and-fsxaml/. First Rename Library.fs to App.fs.
+        </Document>
+        <Document ID="15">
+            <Title>Links</Title>
+            <Text>https://github.com/elmish/Elmish.WPF#getting-started-with-elmishwpf
+
+https://visualstudio.microsoft.com/vs/community/</Text>
+        </Document>
+        <Document ID="16">
+            <Title>Creating and Configuring the Project</Title>
+            <Text>Let's take what we've learned so far to create our Fractals viewer using WPF and FsXaml for our UI. Since we are going to be working in Windows in this chapter we will use Visual Studio Community Edition for our development. Visual Studio Community Edition is free and you can download and install it from https://visualstudio.microsoft.com/vs/community/. Install the F# tools when you install Visual Studio Community Edition. Take some time to learn how to use Visual Studio, especially features such as debugging and performance profiling you haven’t used them before. 
+When you are are ready, type in the following commands into a Powershell command prompt to create the skeleton of the Fractals viewer project:
+
+1: dotnet new sln -n Fractals
+2: dotnet new classlib -lang &quot;F#&quot; -n Viewer
+3: dotnet sln add Viewer/Viewer.fsproj
+
+A quick explanation of what each line means: In line 1 we create a new Visual Studio solution file called Fractals. In line 2 we create a new F# based class library called Viewer. The files associated with this Viewer are stored in the sub-directory Viewer. Finally, on line 3 the Viewer class library is added to the solution.</Text>
+        </Document>
+        <Document ID="17">
+            <Title>What is a Fractal?</Title>
+            <Text>Before we continue any further let's make a small detour and ask ourselves “What is a fractal?” and specifically “What is a Julia Set” and “What is the Mandlebrot Set?” You may skip this section and the subsections contained therein if you are a Mathematician or your are already familiar with fractals.</Text>
+        </Document>
+        <Document ID="18">
+            <Title>Complex Numbers</Title>
+        </Document>
+        <Document ID="19">
+            <Title>View</Title>
+        </Document>
+        <Document ID="20">
+            <Title>Update</Title>
+        </Document>
+        <Document ID="21">
+            <Title>MVU</Title>
+            <Text>Our fractal viewer application will use the Model/View/Update (MVU) architecture to implement its UI. Briefly, the model stores information about what is being viewed, the view displays the contents of the model, and the updater connects the model to the view and relays information from the model to the view when they need to communicate.
+To make this more concrete, imagine you are writing a drawing application for colored pencils. The model would store information about the paper type—it’s thickness, the color of the paper, the pattern of texture, the paper’s reflectivity, and so on. It would also store information about the pencils available, their colors, whether they broke up easily when scraped across the paper, whether the pencil particles were soluble, and so on and on. The model would also store a representation of the paper and what had been drawn on the paper (perhaps as a multi-layer bitmap buffer).
+The view is responsible for rendering the model. It would take whatever is stored in the model and render it using whatever rendering technology is available or desired for the view implementation. The view implementation could, for example, use Windows Presentation Foundation (WPF) to render the contents of the pencil drawing model. Or the view could use one of those fancy new rendering APIs like DirectX 12 or Vulkan to render the pencil drawing. Or it might just use plain and simple good old OpenGL. Or the view implementation could be something like a colored PDF file. Or it could even be something more exotic like a computer controlled robotic hand which creates the drawing with real colored pencils. You get the idea!
+Finally, the update part of the MVU architecture connects the view to the model by passing messages to the model. Whenever the model needs to be changed, for example when a user moves the mouse across the table with the left mouse button held down indicating that a new stroke needs to be drawn, the updater intercepts these mouse interactions and modifies the model accordingly. The view is then notified about the new model state causing it to re-render the contents of the model.
+So you can think of the model, view, and update implementations as forming a loop or circle. The model affects the view which affects the update which affects the model and so on.
+￼
+</Text>
+        </Document>
+        <Document ID="22">
+            <Title>Hello</Title>
+        </Document>
+        <Document ID="23">
+            <Title>Preface</Title>
+            <Text>    Welcome to Get Going With F#—A short book on learning how to use F# programming language for every day tasks. Each chapter in the book is a little mini-project where the reader is taught how to solve a particular type of problem using F#. The hope is that these projects contain enough information to get you started on your own projects.
+    This book assumes that you have programmed in at least one programming language for 2 to 3 years. Seasoned programmers with C#/C/C++ will have a special advantage. Unless otherwise stated, each chapter is stand-alone and can be read independently and out of order with the other ones, albeit, I do recommend that you read chapter 1 first even though you may already be familiar with F#.
+Chapter 1 is a very brief introduction to F# and functional programming. It ramps you up quickly so that you can start writing useful applications as soon as you have completed the chapter.
+Chapter 2 teaches you how to write a simple UI application for viewing fractals using WPF and FsXaml. At the end of the chapter you will have a fairly functional Julia and Mandelbrot set viewer.
+</Text>
+        </Document>
+        <Document ID="24">
+            <Title>Hi my name is Raghavendra Chandrashekara. I am 44</Title>
+        </Document>
+        <Document ID="25">
+            <Title>FAQ</Title>
+            <Text>This section collects useful tricks, cheats, and patterns for using and programming with F#. If you found any particularly useful patterns that you like, please send them to me at raghavendra.chandrashekara@outlook.com. Thanks!</Text>
+        </Document>
+        <Document ID="26"/>
+        <Document ID="27">
+            <Title>Mathematics</Title>
+        </Document>
+        <Document ID="28">
+            <Title>Add Project References</Title>
+            <Text>Now open up Visual Studio and open the solution file you just created. Right-click on the Viewer project in the Solution Explorer:
+
+￼
+
+and select Properties in the context menu that appears:
+
+￼
+
+In the Viewer properties page, in the Application tab select Windows Application instead of Class Library from the Output type: menu.
+
+￼
+
+Now right-click on the Viewer project again and select Manage NuGet Packages … from the context menu that appears. In the NuGet package manager, type in FsXaml in the Browse box:
+
+
+
+￼
+
+Select and install FsXaml.Wpf by pressing the downwards pointing arrow which appears when you hover your mouse over the FsXaml.Wpf button:
+
+￼
+
+Similarly add a reference to PresentationFramework
+
+￼</Text>
+        </Document>
+        <Document ID="29">
+            <Title>We are going to follow the instructions at</Title>
+            <Text>We are going to follow the instructions at https://www.c-sharpcorner.com/article/create-wpf-application-with-f-sharp-and-fsxaml/. First Rename Library.fs to App.fs.
     Then add a new XML file to the project and rename it App.xaml: Right click on the Viewer project in the Solution Explorer and select Add &gt; New Item… Call the new file App.xaml
 ￼
 Your solution explorer should now look like:
@@ -231,175 +324,36 @@ Then replace the contents of App.fs with the following:
   10:      App().Run()   
 
 As mentioned in the blog, line 6 generates a new App type.
-
-
-pen Library.fs in the Solution Explorer which is stored under the Viewer project. Your code should look like:
-   1:    namespace Viewer 
-   2:     
-   3:    module Say = 
-   4:        let hello name = 
-   5:            printfn &quot;Hello %s&quot; name 
-
-Delete the above text and type in the following. First we change the namespace to Fractals.
-   1:    namespace Fractals 
-   2:     
-And then change the module name to Fractals:
-
-   3:    module Fractals = 
-
-Now we define a type called FractalType to represent either Julia sets or the Mandelbrot set.
-
-   4:      /// Define a type for the fractal set type. 
-   5:      type FractalType = Julia | Mandelbrot 
+Similar to how you created App.xaml, create a new file called MainWindow.xaml and add the following contents to the file:
+   1:    &lt;Window xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot; 
+   2:        xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot; 
+   3:        xmlns:local=&quot;clr-namespace:Views;assembly=FsXamlApp&quot; 
+   4:        xmlns:fsxaml=&quot;http://github.com/fsprojects/FsXaml&quot; 
+   5:        Title=&quot;F# Windows App&quot; Height=&quot;300&quot; Width=&quot;400&quot;&gt; 
    6:     
+   7:      &lt;Grid&gt; 
+   8:        &lt;TextBlock Text=&quot;Hello F# from WPF!&quot; 
+   9:                   HorizontalAlignment=&quot;Center&quot; 
+  10:                   VerticalAlignment=&quot;Center&quot; /&gt; 
+  11:      &lt;/Grid&gt; 
+  12:    &lt;/Window&gt; 
+  13:     
 
-The Model type stores the actual fractal type.
+Next add the codebehind for the file in a new file called MainWindow.xaml.fs:
+
+   1:    namespace FsXamlApp   
+   2:    open FsXaml   
+   3:     
+   4:    type MainWindow = XAML&lt;&quot;MainWindow.xaml&quot;&gt;   
+
+Now right-click on the MainWindow.xaml file in Solution Explorer and change the BuildAction to resource as shown below. Do the same for App.xaml.
+￼
+You should now be able to run the skeleton application and the following window should be shown when you do so.
+￼
  
-   7:      /// The model storing the type. 
-   8:      type Model = 
-   9:         Type : FractalType  
-  10:     
-Now we define an initialization function called Init which sets the initial fractal type to Julia:
 
-  11:      /// Initialization function for the Model type. 
-  12:      let Init() =  
-  13:         Type = Julia  
-  14:     
-Finally, we define a message type called Msg which is passed to an Update function to update the Model when needed and return a new Model.
-
-  15:      /// Messages which can be sent to the fractals Model. 
-  16:      type Msg = 
-  17:        | SetFractalType of FractalType 
-  18:     
-  19:      /// Updates the Model based on the message sent and 
-  20:      /// returns a new Model. 
-  21:      let Update msg m = 
-  22:        match msg with 
-  23:        | SetFractalType t -&gt;  m with Type = t  
-
-The code above should be fairly straightforward to follow if you took the F# tour in chapter 1, have been reading the official F# documentation, did the exercises and have read the introduction to FsXaml.
- 
-</Text>
-        </Document>
-        <Document ID="15">
-            <Title>Links</Title>
-            <Text>https://github.com/elmish/Elmish.WPF#getting-started-with-elmishwpf
-
-https://visualstudio.microsoft.com/vs/community/</Text>
-        </Document>
-        <Document ID="16">
-            <Title>Creating and Configuring the Project</Title>
-            <Text>Let's take what we've learned so far to create our Fractals viewer using WPF and FsXaml for our UI. Since we are going to be working in Windows in this chapter we will use Visual Studio Community Edition for our development. Visual Studio Community Edition is free and you can download and install it from https://visualstudio.microsoft.com/vs/community/. Install the F# tools when you install Visual Studio Community Edition. Take some time to learn how to use Visual Studio, especially features such as debugging and performance profiling you haven’t used them before. 
-When you are are ready, type in the following commands into a Powershell command prompt to create the skeleton of the Fractals viewer project:
-
-1: dotnet new sln -n Fractals
-2: dotnet new classlib -lang &quot;F#&quot; -n Viewer
-3: dotnet sln add Viewer/Viewer.fsproj
-
-A quick explanation of what each line means: In line 1 we create a new Visual Studio solution file called Fractals. In line 2 we create a new F# based class library called Viewer. The files associated with this Viewer are stored in the sub-directory Viewer. Finally, on line 3 the Viewer class library is added to the solution.
-Now open up Visual Studio and open the solution file you just created. Right-click on the Viewer project in the Solution Explorer:
-
-￼
-
-and select Properties in the context menu that appears:
-
-￼
-
-In the Viewer properties page, in the Application tab select Windows Application instead of Class Library from the Output type: menu.
-
-￼
-
-Now right-click on the Viewer project again and select Manage NuGet Packages … from the context menu that appears. In the NuGet package manager, type in FsXaml in the Browse box:
-
-
-
-￼
-
-Select and install FsXaml.Wpf by pressing the downwards pointing arrow which appears when you hover your mouse over the FsXaml.Wpf button:
-
-￼
 
 </Text>
-        </Document>
-        <Document ID="17">
-            <Title>What is a Fractal?</Title>
-            <Text>Before we continue any further let's make a small detour and ask ourselves “What is a fractal?” and specifically “What is a Julia Set” and “What is the Mandlebrot Set?” You may skip this section and the subsections contained therein if you are a Mathematician or your are already familiar with fractals.</Text>
-        </Document>
-        <Document ID="18">
-            <Title>Complex Numbers</Title>
-        </Document>
-        <Document ID="19">
-            <Title>View</Title>
-            <Text>Now let’s implement the view. Let’s open Elmish.WPF and then define a View function which binds the “FractalType” string to Model.Type and Model.SetFractalType.
-
-  24:     
-  25:      open Elmish.WPF 
-  26:     
-  27:      /// Binds the &quot;FractalType&quot; string from XAML views to the 
-  28:      /// Model. 
-  29:      let View () = 
-  30:        [ 
-  31:          &quot;FractalType&quot; |&gt; Binding.twoWay( 
-  32:            (fun m -&gt; m.Type), 
-  33:            (fun newValue m -&gt; newValue |&gt; SetFractalType )) 
-  34:        ] 
-
-Finally let’s add a main function to start the main MVU loop.
-
-  35:     
-  36:      let main window = 
-  37:        Program.mkSimpleWpf Init Update View 
-  38:        |&gt; Program.runWindow window 
-
-Right click on the Fractals solution in the Solution Explorer and select Add &gt; New Project… In the dialog which appears choose WPF App (.NET Framework) and then click the Next button.
-
-￼
-
-Type in ViewerWPF in the Project name text box. Set the Framework to .NET Framework 4.8 and then click on the Create button.
-
-￼
-
-Your Solution Explorer should look like the following afterward.
-
-￼
-
-Right-click on ViewerWPF &gt; References and select Add Reference… from the context menu which appears. Then in the Reference Manager dialog box select Projects on the left hand side, then tick the Viewer project in the center part of the dialog. Finally click OK to add the Viewer project as a reference to ViewerWPF.
-Next add package references to FSharp.Core and Elmish.WPF using the same method you used earlier in section 2.1. You should now be able to compile and run the application. If you do so, then you will see an empty main window.</Text>
-        </Document>
-        <Document ID="20">
-            <Title>Update</Title>
-        </Document>
-        <Document ID="21">
-            <Title>MVU</Title>
-            <Text>Our fractal viewer application will use the Model/View/Update (MVU) architecture to implement its UI. The model stores information about what is being viewed, the view displays the contents of the model, the connector the update object relays information from the model to the view and vice versa whenever the model is being updated.
-To make this more concrete, imagine you are writing a drawing application for colored pencils. The model would store information about the paper type—it’s thickness, the color of the paper, the pattern of texture, the paper’s reflectivity, and so on. It would also store information about the pencils available, their colors, whether they broke up easily when scraped across the paper, whether the pencil particles were soluble, and so on and on. The model would also store a representation of the paper and what had been drawn on the paper (perhaps as a multi-layer bitmap buffer).
-The view is responsible for rendering the model. It would take whatever is stored in the model and render it using whatever rendering technology is available or desired for the view implementation. The view implementation could, for example, use Windows Presentation Foundation (WPF) to render the contents of the pencil drawing model. Or the view could use one of those fancy new rendering APIs like DirectX 12 or Vulkan to render the pencil drawing. Or it might just use plain and simple good old OpenGL. Or the view implementation could be something like a colored PDF file. Or it could even be something more exotic like a computer controlled robotic hand which creates the drawing with real colored pencils. You get the idea!
-Finally, the update part of the MVU architecture connects the view to the model by passing messages to the model. Whenever the model needs to be changed, for example when a user moves the mouse across the table with the left mouse button held down indicating that a new stroke needs to be drawn, the updater intercepts these mouse interactions and modifies the model accordingly. The view is then notified about the new model state causing it to re-render the contents of the model.
-So you can think of the model, view, and update implementations as forming a loop or circle. The model affects the view which affects the update which affects the model and so on.
-￼
-</Text>
-        </Document>
-        <Document ID="22">
-            <Title>Hello</Title>
-        </Document>
-        <Document ID="23">
-            <Title>Preface</Title>
-            <Text>    Welcome to Get Going With F#—A short book on using the F# programming language to get various things done. Each chapter in the book is a little mini-project where the reader is taught how to solve a particular type of problem using F#.
-    This book assumes that you have programmed in at least one programming language for 2 to 3 years. Seasoned programmers with C#/C/C++ will have a special advantage. Unless otherwise stated, each chapter is stand-alone and can be read independently and out of order with the other ones, albeit, I do recommend that you read chapter 1 first even though you may already be familiar with F#.
-Chapter 1 is a very brief introduction to F# and functional programming. It ramps you up quickly so that you can start writing useful applications as soon as you have completed the chapter.
-Chapter 2 teaches you how to write a simple UI application for viewing fractals using WPF and FsXaml. At the end of the chapter you will have a fairly functional Julia and Mandelbrot set viewer.
-</Text>
-        </Document>
-        <Document ID="24">
-            <Title>Hi my name is Raghavendra Chandrashekara. I am 44</Title>
-        </Document>
-        <Document ID="25">
-            <Title>FAQ</Title>
-            <Text>This section collects useful tricks, cheats, and patterns for using and programming with F#. If you found any particularly useful patterns that you like, please send them to me at raghavendra.chandrashekara@outlook.com. Thanks!</Text>
-        </Document>
-        <Document ID="26"/>
-        <Document ID="27">
-            <Title>Mathematics</Title>
         </Document>
     </Documents>
 </SearchIndexes>
