@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SearchIndexes Version="1.0">
+    <Documents>
+        <Document ID="3">
+            <Title>An Introduction to F#</Title>
+            <Text>F# is a functional-first programming language. That is, F# is a programming language which emphasizes the functional aspect of programming to a great extent. Much more so than other languages you may be familiar with such as C#, Visual Basic .NET, Python and JavaScript. You will already be quite familiar with functions: you met them in high school when you drew a plot of the function, ￼ using your trusty Sharp EL 9300 graphing calculator or your favorite plotting program on the WWW (e.g. Desmos at https://desmos.com/calculator). Functions as opposed to objects are the first-class citizens of functional programming languages like F#. They allow one to think about and solve problems using features prominent in functional programming such as immutability, pipelining, partial application, type-inference, and strong typing. (Note that these features are not unique to F#, they exist in other functional programming languages, and indeed in ordinary imperative programming languages such as C#, Visual Basic .NET, Python and JavaScript).
+F# was created by Don Syme who is an Australian Computer Scientist and Principal Researcher at Microsoft Research, Cambridge, UK. He is still very active in the F# community and makes contributions to the F# language to this day (March 24th 2021). You could call him the Grandfather of F# or the Supreme Leader of the F# community.
+F# allows one to think about a particular programming problem or task in a clean and simple way. It has the clean simplicity of Python while retaining the performance and type safety found in languages such as C++ and C#. F# can be used to write small programs with specific goals set at the start to large systems with open-ended goals.
+F# is fully open source and fully cross-platform. F# is integrated within Visual Studio and so can make full use of all the integrated development environment’s (IDE’s) features such as Intellisense, package management, documentation browser, etc. Alternatively, The Visual F# Tools can be downloaded from https://github.com/Microsoft/visualfsharp to develop F# programs without an IDE. On top of that, F# code can be run in Jupyter Notebooks hosted on Microsoft Azure Services.
+I also use Visual Studio Code sometimes because it is cross-platform and has about a million different extensions from Markdown editing support to copy code/text with line numbers and everything else you can think of in-between.
+
+
+
+
+
+
+</Text>
+        </Document>
+        <Document ID="4">
+            <Title>Hello, World!</Title>
+            <Text>As is traditional when learning most programming languages we will begin by writing a “Hello, World!” program. To do so first download and install the .NET SDK. You can search the Internet for instructions on how to download and install the .NET SDK. You are also free to choose whichever OS you prefer.
+Open a command terminal and type in
+
+dotnet new console -lang &quot;F#&quot; -o hello
+
+cd into the directory hello which was created when you typed in the above command. Then, open the file Program.fs which was created when the directory was created. It should look something like:
+
+   0:    // Learn more about F# at http://docs.microsoft.com/dotnet/fsharp 
+   1:     
+   2:    open System 
+   3:     
+   4:    // Define a function to construct a message to print 
+   5:    let from whom = 
+   6:        sprintf &quot;from %s&quot; whom 
+   7:     
+   8:    [&lt;EntryPoint&gt;] 
+   9:    let main argv = 
+  10:        let message = from &quot;F#&quot; // Call the function 
+  11:        printfn &quot;Hello world %s&quot; message 
+  12:        0 // return an integer exit code 
+
+Replace the contents of the file with just:
+  0:    printfn &quot;Hello, World!&quot; 
+
+Now go back to the terminal and type in:
+
+dotnet run
+
+Pretty cool! Right? One line of code is all that's needed to print out a message to the console and a one line command is all you need to build and run the executable that prints out the message. That's a lot better than C or  C++ or C# and just as good as Python or any other scripting language.</Text>
+        </Document>
+        <Document ID="5">
+            <Title>Compiler Codes</Title>
+            <Text>Codes for compiler - Literature and Latte
+
+￼User avatar
+Cosmicjive
+Posts: 53
+Joined: Wed Sep 22, 2010 8:14 pm
+Platform: Mac + Windows
+Location: Tustin, CA (USA)
+QUOTE
+MON MAR 19, 2012 6:32 PM POST
+These are known as &quot;placeholder tags.&quot;
+
+These are the tags that work in the Windows version of the application:
+
+Statistics
+
+&lt;$wc&gt;
+Gets replaced during the Compile process with the total word count of the text currently being compiled.
+
+&lt;$wc50&gt;
+Gets replaced during the Compile process with the total word count of the text currently being compiled, rounded to the nearest 50 words.
+
+&lt;$wc100&gt;
+Gets replaced during the Compile process with the total word count of the text currently being compiled, rounded to the nearest 100 words.
+
+&lt;$wc500&gt;
+Gets replaced during the Compile process with the total word count of the text currently being compiled, rounded to the nearest 500 words.
+
+&lt;$wc1000&gt;
+Gets replaced during the Compile process with the total word count of the text currently being compiled, rounded to the nearest 1000 words.
+
+&lt;$cc&gt;
+Gets replaced during the Compile process with the total character count of the text currently being compiled.
+
+&lt;$cc50&gt;
+Gets replaced during the Compile process with the total character count of the text currently being compiled, rounded to the nearest 50 characters.
+
+&lt;$cc100&gt;
+Gets replaced during the Compile process with the total character count of the text currently being compiled, rounded to the nearest 100 characters.
+
+&lt;$cc500&gt;
+Gets replaced during the Compile process with the total character count of the text currently being compiled, rounded to the nearest 500 characters.
+
+&lt;$cc1000&gt;
+Gets replaced during the Compile process with the total character count of the text currently being compiled, rounded to the nearest 1000 characters.
+
+
+
+
+Auto-Numbering
+
+&lt;$n&gt;
+Gets replaced with Arabic numerals during the Compile process. The number is incremented each time a &lt;$n&gt; tag is encountered in the text, so “&lt;$n&gt;, &lt;$n&gt;, &lt;$n&gt;” would become “1, 2, 3” in the compiled text.
+
+&lt;$sn&gt;
+The same as &lt;$n&gt; but intended to be used for sub-numbering. The count restarts each time an &lt;$n&gt; tag is encountered. Thus, “&lt;$n&gt; (&lt;$sn&gt;, &lt;$sn&gt;), &lt;$n&gt; (&lt;$sn&gt;, &lt;$sn&gt;)” would become “1 (1, 2), 2 (1, 2)” in the compiled text.
+
+&lt;$r&gt;
+Gets replaced with lowercase Roman numerals during the Compile process. The number is incremented each time a &lt;$r&gt; tag is encountered in the text, so “&lt;$r&gt;, &lt;$r&gt;, &lt;$r&gt;” would become “i, ii, iii” in the compiled text.
+
+&lt;$R&gt;
+Gets replaced with uppercase Roman numerals during the Compile process. The number is incremented each time a &lt;$R&gt; tag is encountered in the text, so “&lt;$R&gt;, &lt;$R&gt;, &lt;$R&gt;” would become “I, II, III” in the compiled text.
+
+&lt;$w&gt;
+Gets replaced with numbers as lowercase words (using the current language settings) during the Compile process. The number is incremented each time a &lt;$w&gt; tag is encountered in the text, so “&lt;$w&gt;, &lt;$w&gt;, &lt;$w&gt;” would become “one, two, three” in the compiled text.
+
+&lt;$t&gt;
+Gets replaced with numbers as title-case words (using the current language settings) during the Compile process. The number is incremented each time a &lt;$t&gt; tag is encountered in the text, so “&lt;$t&gt;, &lt;$t&gt;, &lt;$t&gt;” would become “One, Two, Three” in the compiled text.
+
+&lt;$W&gt;
+Gets replaced with numbers as uppercase words (using the current language settings) during the Compile process. The number is incremented each time a &lt;$W&gt; tag is encountered in the text, so “&lt;$W&gt;, &lt;$W&gt;, &lt;$W&gt;” would become “ONE, TWO, THREE” in the compiled text.
+
+&lt;$hn&gt;
+Gets replaced during the Compile process with hierarchical numbering based on the level of the document in which the tag occurs relative to the Draft folder or compile group (depending on the current compile settings). So occurrences of the &lt;$hn&gt; tag in the second document in the Draft folder may get replaced with the number “2”; occurrences of the tag in the third subdocument of the eight document in the Draft folder may be replaced with “8.3”.
+
+Restarting auto-numbering streams:
+&lt;$rst&gt;
+Place &lt;$rst&gt; immediately before any of the auto-numbering tags to restart the numbering. So, for instance, “&lt;$w&gt;, &lt;$w&gt;, &lt;$w&gt;, &lt;$rst&gt;&lt;$w&gt;, &lt;$w&gt;” would become “one, two, three, one, two” in the compiled text.
+
+Page Numbers
+
+&lt;$p&gt;
+When used in the header or footer, gets replaced with the current page number.
+
+
+-Jeff</Text>
+        </Document>
+        <Document ID="6">
+            <Title>Summary</Title>
+            <Text>In this chapter your wrote your first F# program!: A simple &quot;Hello, World!&quot; program. To do this you setup your system to write F# programs. You downloaded and installed the .NET SDK (if you didn't already have it installed) and then created a new console project. You then modified the code to print &quot;Hello, World!&quot; to the console.
+You then took a tour of F# from around the web and returned to the book to complete some simple exercises. You also read some documentation on the dotnet command and played around with the command a little. You could say you are a beginner F# programmer, maybe even an intermediate F# programmer who is fairly competent at thinking about problems in a functional way. You are now ready to tackle what every programmer dreads and loves at the same time: UIs!
+</Text>
+        </Document>
+        <Document ID="7">
+            <Title>The dotnet Command</Title>
+            <Text>You should also familiarize yourself with the dotnet command as you will be using it a lot. You can get help by typing in dotnet -h and also by searching and reading the Microsoft documentation online. Here are a few exercises that you can try after you've familiarized yourself with the dotnet command.</Text>
+        </Document>
+        <Document ID="8">
+            <Title>Exercises</Title>
+            <Text>What is the default build configuration?
+In which directory is the output stored?
+What (SDK) command do you need to use to clean the output inside the build directory? Which files/directories still remain after you've cleaned the build directory?
+What command do you need to type in to build a Release version of the &quot;Hello, World!&quot; application?
+How do you run the Release version of the application.
+How do you clean the Release build?</Text>
+        </Document>
+        <Document ID="9">
+            <Title>But Wait!</Title>
+            <Text>I know what you're thinking!: There is something wrong here! Where is the function? There is a printfn function being called here which is taking a single string parameter as input and then outputting that string parameter to the console. But where is our function? Isn't F# supposed to be a functional-first programming language where nearly everything is a function? That is true. But in this case to make things easier to do, like simple scripting, the F# compiler is creating a &quot;main&quot; function for us which is then called by the .NET runtime. To make this more explicit we can wrap the &quot;Hello, World&quot; code inside of a function ourselves. So let's do that.
+Change the code to the following:
+
+   0:    open System 
+   1:     
+   2:    [&lt;EntryPoint&gt;] 
+   3:    let main(argv) = 
+   4:      printfn &quot;Hello, World!&quot; 
+   5:      0 
+
+Type in dotnet run to check that everything still works fine.
+The code should be self-explanatory. Line 0 &quot;open&quot;s and makes the classes and objects in the .NET System library available for use by our little program. Line 2 sets the entry point for our program. Line 3 defines our function which takes in a list of strings as its one and only argument for the function. (Note that the type of the argument is not specified in the code. The F# compiler already knows what the type should be.) This parameter is not used in our program. Line 4 prints our &quot;Hello, World!&quot; message and finally line 5 returns the exit value. Notice that on line 5 we didn't need to write &quot;return 0&quot; as in some other languages that you may be familiar with. You just write down the actual return value and that's it!</Text>
+        </Document>
+        <Document ID="10">
+            <Title>Take a Tour of F#</Title>
+            <Text>Now that you've written and run &quot;Hello, World!&quot; in F# you should take a tour of F#. Start at the following URL http://docs.microsoft.com/en-us/dotnet/fsharp/tour. Once you feel ready to continue reading this book come back here and do the exercises in the following section.</Text>
+        </Document>
+        <Document ID="11">
+            <Title>Exercises</Title>
+            <Text>Modify the &quot;Hello, World!&quot; program to ask the user for his/her name and print out &quot;Hello &lt;name of user&gt;!&quot; instead of &quot;Hello, World!&quot;.
+Write a function which will take two numbers and add them together and return answer.
+Write a function which will compute the factorial of a number. You will need to research how to write recursive functions in F#.
+Write a function which will compute the nth term in the Fibonacci sequence.</Text>
+        </Document>
+        <Document ID="12">
+            <Title>What Next?</Title>
+            <Text>By now you should have a fairly good grasp of functional programming and F# in particular. You could stop reading this book now and continue your exploration of F# as needed for the particular set of projects that you are working on.
+So what value does this book on F# have? Well, read on and you can decide for yourself whether the book fulfills any purpose and hence has any value. The remainder of this book contains mini-projects on various interesting topics from UIs to Neural Networks to 3D Computer Graphics. Each of the projects was chosen to illustrate how to solve a particular type of problem with F#. In the next chapter we will tackle the problem of writing UIs with F#. By the end of the chapter we will have a fairly functional fractal image generator for Julia and Mandlebrot sets. So without further delay let's get started!</Text>
+        </Document>
+        <Document ID="13">
+            <Title>Writing UIs with F#</Title>
+            <Text>There are a number of paths available to programmers who decide to write UIs with F#:
+
+Avalonia.FuncUI (Cross-Platform)
+Elmish.WPF (Windows Only)
+Use Windows Forms or WPF directly (Windows Only)
+
+If you want to be cross-platform then option 1 is your best bet. Avalonia.FuncUI is fairly intuitive to use and will suit your purposes admirably, but at the time of writing (March 26th 2021) the documentation is so-so. So unless you like searching the web for answers and asking questions on Stack Exchange I don't recommend this route. Instead wait for 6 months and come back to Avalonia.FuncUI if you still need to write UIs in F#—the documentation will have improved by then.
+Option 2, the Elmish.WPF route, is a Windows only route. It is a battle-tested UI framework with good documentation. It uses the model/view/update (MVU) pattern in its implementation. We will talk about the MVU pattern shortly.
+Option 3 is also available for those who want to use their prior knowledge on Windows Forms or WPF directly in their apps on Windows. This is the route (with WPF) that we will take in this book as more readers will be aware of WPF than Avalonia.FuncUI or Elmish.WPF.
+You can find out more information about the three options available at http://fsharp.org/use/desktop-apps/. Since we are going to be using WPF directly on Windows read this excellent article also to get started with WPF using F#: https://www.c-sharpcorner.com/article/create-wpf-application-with-f-sharp-and-fsxaml/.</Text>
+        </Document>
+        <Document ID="14">
+            <Title>Model</Title>
+        </Document>
+        <Document ID="15">
+            <Title>Links</Title>
+            <Text>https://github.com/elmish/Elmish.WPF#getting-started-with-elmishwpf
+
+https://visualstudio.microsoft.com/vs/community/</Text>
+        </Document>
+        <Document ID="16">
+            <Title>Creating and Configuring the Project</Title>
+            <Text>Let's take what we've learned so far to create our Fractals viewer using WPF and FsXaml for our UI. Since we are going to be working in Windows in this chapter we will use Visual Studio Community Edition for our development. Visual Studio Community Edition is free and you can download and install it from https://visualstudio.microsoft.com/vs/community/. Install the F# tools when you install Visual Studio Community Edition. Take some time to learn how to use Visual Studio, especially features such as debugging and performance profiling you haven’t used them before. 
+When you are are ready, type in the following commands into a Powershell command prompt to create the skeleton of the Fractals viewer project:
+
+1: dotnet new sln -n Fractals
+2: dotnet new classlib -lang &quot;F#&quot; -n Viewer
+3: dotnet sln add Viewer/Viewer.fsproj
+
+A quick explanation of what each line means: In line 1 we create a new Visual Studio solution file called Fractals. In line 2 we create a new F# based class library called Viewer. The files associated with this Viewer are stored in the sub-directory Viewer. Finally, on line 3 the Viewer class library is added to the solution.</Text>
+        </Document>
+        <Document ID="17">
+            <Title>What is a Fractal?</Title>
+            <Text>Before we continue any further let's make a small detour and ask ourselves “What is a fractal?” and specifically “What is a Julia Set” and “What is the Mandlebrot Set?” You may skip this section and the subsections contained therein if you are a Mathematician or your are already familiar with fractals.</Text>
+        </Document>
+        <Document ID="18">
+            <Title>Complex Numbers</Title>
+        </Document>
+        <Document ID="19">
+            <Title>View</Title>
+        </Document>
+        <Document ID="20">
+            <Title>Update</Title>
+        </Document>
+        <Document ID="21">
+            <Title>MVU</Title>
+            <Text>Our fractal viewer application will use the Model/View/Update (MVU) architecture to implement its UI. Briefly, the model stores information about what is being viewed, the view displays the contents of the model, and the updater connects the model to the view and relays information from the model to the view when they need to communicate.
+To make this more concrete, imagine you are writing a drawing application for colored pencils. The model would store information about the paper type—it’s thickness, the color of the paper, the pattern of texture, the paper’s reflectivity, and so on. It would also store information about the pencils available, their colors, whether they broke up easily when scraped across the paper, whether the pencil particles were soluble, and so on and on. The model would also store a representation of the paper and what had been drawn on the paper (perhaps as a multi-layer bitmap buffer).
+The view is responsible for rendering the model. It would take whatever is stored in the model and render it using whatever rendering technology is available or desired for the view implementation. The view implementation could, for example, use Windows Presentation Foundation (WPF) to render the contents of the pencil drawing model. Or the view could use one of those fancy new rendering APIs like DirectX 12 or Vulkan to render the pencil drawing. Or it might just use plain and simple good old OpenGL. Or the view implementation could be something like a colored PDF file. Or it could even be something more exotic like a computer controlled robotic hand which creates the drawing with real colored pencils. You get the idea!
+Finally, the update part of the MVU architecture connects the view to the model by passing messages to the model. Whenever the model needs to be changed, for example when a user moves the mouse across the table with the left mouse button held down indicating that a new stroke needs to be drawn, the updater intercepts these mouse interactions and modifies the model accordingly. The view is then notified about the new model state causing it to re-render the contents of the model.
+So you can think of the model, view, and update implementations as forming a loop or circle. The model affects the view which affects the update which affects the model and so on.
+￼
+</Text>
+        </Document>
+        <Document ID="22">
+            <Title>Hello</Title>
+        </Document>
+        <Document ID="23">
+            <Title>Preface</Title>
+            <Text>    Welcome to Get Going With F#—A short book on learning how to use F# programming language for every day tasks. Each chapter in the book is a little mini-project where the reader is taught how to solve a particular type of problem using F#. The hope is that these projects contain enough information to get you started on your own projects.
+    This book assumes that you have programmed in at least one programming language for 2 to 3 years. Seasoned programmers with C#/C/C++ will have a special advantage. Unless otherwise stated, each chapter is stand-alone and can be read independently and out of order with the other ones, albeit, I do recommend that you read chapter 1 first even though you may already be familiar with F#.
+Chapter 1 is a very brief introduction to F# and functional programming. It ramps you up quickly so that you can start writing useful applications as soon as you have completed the chapter.
+Chapter 2 teaches you how to write a simple UI application for viewing fractals using WPF and FsXaml. At the end of the chapter you will have a fairly functional Julia and Mandelbrot set viewer.
+</Text>
+        </Document>
+        <Document ID="24">
+            <Title>Hi my name is Raghavendra Chandrashekara. I am 44</Title>
+        </Document>
+        <Document ID="25">
+            <Title>FAQ</Title>
+            <Text>This section collects useful tricks, cheats, and patterns for using and programming with F#. If you found any particularly useful patterns that you like, please send them to me at raghavendra.chandrashekara@outlook.com. Thanks!</Text>
+        </Document>
+        <Document ID="26"/>
+        <Document ID="27">
+            <Title>Mathematics</Title>
+        </Document>
+        <Document ID="28">
+            <Title>Add Project References</Title>
+            <Text>Now open up Visual Studio and open the solution file you just created. Right-click on the Viewer project in the Solution Explorer:
+
+￼
+
+and select Properties in the context menu that appears:
+
+￼
+
+In the Viewer properties page, in the Application tab select Windows Application instead of Class Library from the Output type: menu.
+
+￼
+
+Now right-click on the Viewer project again and select Manage NuGet Packages … from the context menu that appears. In the NuGet package manager, type in FsXaml in the Browse box:
+
+
+
+￼
+
+Select and install FsXaml.Wpf by pressing the downwards pointing arrow which appears when you hover your mouse over the FsXaml.Wpf button:
+
+￼
+
+Similarly add a reference to PresentationFramework
+
+￼</Text>
+        </Document>
+        <Document ID="29">
+            <Title>We are going to follow the instructions at</Title>
+            <Text>We are going to follow the instructions at https://www.c-sharpcorner.com/article/create-wpf-application-with-f-sharp-and-fsxaml/. First Rename Library.fs to App.fs.
+    Then add a new XML file to the project and rename it App.xaml: Right click on the Viewer project in the Solution Explorer and select Add &gt; New Item… Call the new file App.xaml
+￼
+Your solution explorer should now look like:
+￼
+Replace the code in App.xaml with:
+   1:    &lt;Application 
+   2:        xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot; 
+   3:        xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot; 
+   4:        StartupUri=&quot;MainWindow.xaml&quot;&gt; 
+   5:     
+   6:      &lt;Application.Resources&gt; 
+   7:      &lt;/Application.Resources&gt; 
+   8:     
+   9:    &lt;/Application&gt; 
+
+Then replace the contents of App.fs with the following:
+   1:    module App   
+   2:     
+   3:    open System   
+   4:    open FsXaml   
+   5:     
+   6:    type App = XAML&lt;&quot;App.xaml&quot;&gt;   
+   7:     
+   8:    [&lt;EntryPoint;STAThread&gt;]   
+   9:    let main argv =    
+  10:      App().Run()   
+
+As mentioned in the blog, line 6 generates a new App type.
+Similar to how you created App.xaml, create a new file called MainWindow.xaml and add the following contents to the file:
+   1:    &lt;Window xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot; 
+   2:        xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot; 
+   3:        xmlns:local=&quot;clr-namespace:Views;assembly=FsXamlApp&quot; 
+   4:        xmlns:fsxaml=&quot;http://github.com/fsprojects/FsXaml&quot; 
+   5:        Title=&quot;F# Windows App&quot; Height=&quot;300&quot; Width=&quot;400&quot;&gt; 
+   6:     
+   7:      &lt;Grid&gt; 
+   8:        &lt;TextBlock Text=&quot;Hello F# from WPF!&quot; 
+   9:                   HorizontalAlignment=&quot;Center&quot; 
+  10:                   VerticalAlignment=&quot;Center&quot; /&gt; 
+  11:      &lt;/Grid&gt; 
+  12:    &lt;/Window&gt; 
+  13:     
+
+Next add the codebehind for the file in a new file called MainWindow.xaml.fs:
+
+   1:    namespace FsXamlApp   
+   2:    open FsXaml   
+   3:     
+   4:    type MainWindow = XAML&lt;&quot;MainWindow.xaml&quot;&gt;   
+
+Now right-click on the MainWindow.xaml file in Solution Explorer and change the BuildAction to resource as shown below. Do the same for App.xaml.
+￼
+You should now be able to run the skeleton application and the following window should be shown when you do so.
+￼
+ 
+
+
+</Text>
+        </Document>
+    </Documents>
+</SearchIndexes>
